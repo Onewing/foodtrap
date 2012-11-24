@@ -7,76 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59310CA3155F690D005E0DB2 /* FTEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59310CA2155F690D005E0DB2 /* FTEnemy.m */; };
-		59310CA5155F7879005E0DB2 /* FTEnemy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59310CA4155F7879005E0DB2 /* FTEnemy.xib */; };
-		5971A810152171D80038E1FC /* FTEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5971A80F152171D80038E1FC /* FTEntity.m */; };
-		5971A814152171E70038E1FC /* FTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5971A813152171E70038E1FC /* FTPlayer.m */; };
-		5971A816152176B40038E1FC /* vPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5971A815152176B40038E1FC /* vPlayer.xib */; };
-		59B95F88153A78FC003995D7 /* FTArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B95F87153A78FC003995D7 /* FTArea.m */; };
-		59B95F8C153B99CD003995D7 /* FTKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B95F8B153B99CD003995D7 /* FTKey.m */; };
+		593B238A1660933E004FE031 /* FTArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23711660933E004FE031 /* FTArea.m */; };
+		593B238B1660933E004FE031 /* FTEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23731660933E004FE031 /* FTEnemy.m */; };
+		593B238C1660933E004FE031 /* FTEnemy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23741660933E004FE031 /* FTEnemy.xib */; };
+		593B238D1660933E004FE031 /* FTEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23761660933E004FE031 /* FTEntity.m */; };
+		593B238E1660933E004FE031 /* FTKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23781660933E004FE031 /* FTKey.m */; };
+		593B238F1660933E004FE031 /* FTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B237A1660933E004FE031 /* FTPlayer.m */; };
+		593B23901660933E004FE031 /* FTTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B237C1660933E004FE031 /* FTTile.m */; };
+		593B23911660933E004FE031 /* vTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B237D1660933E004FE031 /* vTile.xib */; };
+		593B23921660933E004FE031 /* FTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B237E1660933E004FE031 /* FTViewController.xib */; };
+		593B23931660933E004FE031 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 593B23801660933E004FE031 /* InfoPlist.strings */; };
+		593B23941660933E004FE031 /* Food Trap-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 593B23821660933E004FE031 /* Food Trap-Info.plist */; };
+		593B23951660933E004FE031 /* FTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23851660933E004FE031 /* FTAppDelegate.m */; };
+		593B23961660933E004FE031 /* FTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23871660933E004FE031 /* FTViewController.m */; };
+		593B23971660933E004FE031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23881660933E004FE031 /* main.m */; };
+		593B23981660933E004FE031 /* vPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23891660933E004FE031 /* vPlayer.xib */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
 		59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656D15183516005B1120 /* CoreGraphics.framework */; };
-		59C9657415183516005B1120 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59C9657215183516005B1120 /* InfoPlist.strings */; };
-		59C9657615183516005B1120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9657515183516005B1120 /* main.m */; };
-		59C9657A15183516005B1120 /* FTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9657915183516005B1120 /* FTAppDelegate.m */; };
-		59C9657D15183516005B1120 /* FTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9657C15183516005B1120 /* FTViewController.m */; };
-		59C9658015183516005B1120 /* FTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C9657E15183516005B1120 /* FTViewController.xib */; };
-		59C9658815183516005B1120 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9658715183516005B1120 /* SenTestingKit.framework */; };
-		59C9658915183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
-		59C9658A15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
-		59C9659215183516005B1120 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59C9659015183516005B1120 /* InfoPlist.strings */; };
-		59C9659515183516005B1120 /* Dungeon_DiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9659415183516005B1120 /* Dungeon_DiverTests.m */; };
-		59C9659F151836C4005B1120 /* vTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C9659E151836C4005B1120 /* vTile.xib */; };
-		59C965A215183732005B1120 /* FTTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C965A115183732005B1120 /* FTTile.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		59C9658B15183516005B1120 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 59C9655C15183516005B1120 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 59C9656415183516005B1120;
-			remoteInfo = "Dungeon Diver";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		59310CA1155F690D005E0DB2 /* FTEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTEnemy.h; path = Classes/FTEnemy.h; sourceTree = "<group>"; };
-		59310CA2155F690D005E0DB2 /* FTEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTEnemy.m; path = Classes/FTEnemy.m; sourceTree = "<group>"; };
-		59310CA4155F7879005E0DB2 /* FTEnemy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FTEnemy.xib; path = Classes/FTEnemy.xib; sourceTree = "<group>"; };
-		5971A80E152171D80038E1FC /* FTEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTEntity.h; path = Classes/FTEntity.h; sourceTree = "<group>"; };
-		5971A80F152171D80038E1FC /* FTEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTEntity.m; path = Classes/FTEntity.m; sourceTree = "<group>"; };
-		5971A812152171E70038E1FC /* FTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTPlayer.h; path = Classes/FTPlayer.h; sourceTree = "<group>"; };
-		5971A813152171E70038E1FC /* FTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTPlayer.m; path = Classes/FTPlayer.m; sourceTree = "<group>"; };
-		5971A815152176B40038E1FC /* vPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vPlayer.xib; sourceTree = "<group>"; };
-		59821D1015241F8600D1475C /* DevTestFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevTestFlags.h; path = Classes/DevTestFlags.h; sourceTree = "<group>"; };
-		59B95F86153A78FC003995D7 /* FTArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTArea.h; path = Classes/FTArea.h; sourceTree = "<group>"; };
-		59B95F87153A78FC003995D7 /* FTArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTArea.m; path = Classes/FTArea.m; sourceTree = "<group>"; };
-		59B95F8A153B99CD003995D7 /* FTKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTKey.h; path = Classes/FTKey.h; sourceTree = "<group>"; };
-		59B95F8B153B99CD003995D7 /* FTKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTKey.m; path = Classes/FTKey.m; sourceTree = "<group>"; };
+		593B236F1660933E004FE031 /* DevTestFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevTestFlags.h; sourceTree = "<group>"; };
+		593B23701660933E004FE031 /* FTArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTArea.h; sourceTree = "<group>"; };
+		593B23711660933E004FE031 /* FTArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTArea.m; sourceTree = "<group>"; };
+		593B23721660933E004FE031 /* FTEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTEnemy.h; sourceTree = "<group>"; };
+		593B23731660933E004FE031 /* FTEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTEnemy.m; sourceTree = "<group>"; };
+		593B23741660933E004FE031 /* FTEnemy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTEnemy.xib; sourceTree = "<group>"; };
+		593B23751660933E004FE031 /* FTEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTEntity.h; sourceTree = "<group>"; };
+		593B23761660933E004FE031 /* FTEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTEntity.m; sourceTree = "<group>"; };
+		593B23771660933E004FE031 /* FTKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKey.h; sourceTree = "<group>"; };
+		593B23781660933E004FE031 /* FTKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTKey.m; sourceTree = "<group>"; };
+		593B23791660933E004FE031 /* FTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPlayer.h; sourceTree = "<group>"; };
+		593B237A1660933E004FE031 /* FTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPlayer.m; sourceTree = "<group>"; };
+		593B237B1660933E004FE031 /* FTTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTile.h; sourceTree = "<group>"; };
+		593B237C1660933E004FE031 /* FTTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTile.m; sourceTree = "<group>"; };
+		593B237D1660933E004FE031 /* vTile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vTile.xib; sourceTree = "<group>"; };
+		593B237F1660933E004FE031 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTViewController.xib; sourceTree = "<group>"; };
+		593B23811660933E004FE031 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		593B23821660933E004FE031 /* Food Trap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Food Trap-Info.plist"; sourceTree = "<group>"; };
+		593B23831660933E004FE031 /* Food Trap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food Trap-Prefix.pch"; sourceTree = "<group>"; };
+		593B23841660933E004FE031 /* FTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAppDelegate.h; sourceTree = "<group>"; };
+		593B23851660933E004FE031 /* FTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAppDelegate.m; sourceTree = "<group>"; };
+		593B23861660933E004FE031 /* FTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTViewController.h; sourceTree = "<group>"; };
+		593B23871660933E004FE031 /* FTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTViewController.m; sourceTree = "<group>"; };
+		593B23881660933E004FE031 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		593B23891660933E004FE031 /* vPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vPlayer.xib; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9656915183516005B1120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59C9656B15183516005B1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59C9656D15183516005B1120 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		59C9657115183516005B1120 /* Food Trap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Food Trap-Info.plist"; sourceTree = "<group>"; };
-		59C9657315183516005B1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		59C9657515183516005B1120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59C9657715183516005B1120 /* Food Trap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Food Trap-Prefix.pch"; sourceTree = "<group>"; };
-		59C9657815183516005B1120 /* FTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTAppDelegate.h; sourceTree = "<group>"; };
-		59C9657915183516005B1120 /* FTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTAppDelegate.m; sourceTree = "<group>"; };
-		59C9657B15183516005B1120 /* FTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTViewController.h; sourceTree = "<group>"; };
-		59C9657C15183516005B1120 /* FTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTViewController.m; sourceTree = "<group>"; };
-		59C9657F15183516005B1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTViewController.xib; sourceTree = "<group>"; };
-		59C9658615183516005B1120 /* Food TrapTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food TrapTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9658715183516005B1120 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		59C9658F15183516005B1120 /* Food TrapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Food TrapTests-Info.plist"; sourceTree = "<group>"; };
-		59C9659115183516005B1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		59C9659315183516005B1120 /* Dungeon_DiverTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dungeon_DiverTests.h; sourceTree = "<group>"; };
-		59C9659415183516005B1120 /* Dungeon_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dungeon_DiverTests.m; sourceTree = "<group>"; };
-		59C9659E151836C4005B1120 /* vTile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vTile.xib; path = Classes/vTile.xib; sourceTree = "<group>"; };
-		59C965A015183732005B1120 /* FTTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTTile.h; path = Classes/FTTile.h; sourceTree = "<group>"; };
-		59C965A115183732005B1120 /* FTTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTTile.m; path = Classes/FTTile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,34 +71,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59C9658215183516005B1120 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59C9658815183516005B1120 /* SenTestingKit.framework in Frameworks */,
-				59C9658915183516005B1120 /* UIKit.framework in Frameworks */,
-				59C9658A15183516005B1120 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		59310C9F155F68F0005E0DB2 /* Enemies */ = {
+		593B236D1660933E004FE031 /* Food Trap */ = {
 			isa = PBXGroup;
 			children = (
-				59310CA1155F690D005E0DB2 /* FTEnemy.h */,
-				59310CA2155F690D005E0DB2 /* FTEnemy.m */,
-				59310CA4155F7879005E0DB2 /* FTEnemy.xib */,
+				593B236E1660933E004FE031 /* Classes */,
+				593B237E1660933E004FE031 /* FTViewController.xib */,
+				593B23801660933E004FE031 /* InfoPlist.strings */,
+				593B23821660933E004FE031 /* Food Trap-Info.plist */,
+				593B23831660933E004FE031 /* Food Trap-Prefix.pch */,
+				593B23841660933E004FE031 /* FTAppDelegate.h */,
+				593B23851660933E004FE031 /* FTAppDelegate.m */,
+				593B23861660933E004FE031 /* FTViewController.h */,
+				593B23871660933E004FE031 /* FTViewController.m */,
+				593B23881660933E004FE031 /* main.m */,
+				593B23891660933E004FE031 /* vPlayer.xib */,
 			);
-			name = Enemies;
+			path = "Food Trap";
+			sourceTree = "<group>";
+		};
+		593B236E1660933E004FE031 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				593B236F1660933E004FE031 /* DevTestFlags.h */,
+				593B23701660933E004FE031 /* FTArea.h */,
+				593B23711660933E004FE031 /* FTArea.m */,
+				593B23721660933E004FE031 /* FTEnemy.h */,
+				593B23731660933E004FE031 /* FTEnemy.m */,
+				593B23741660933E004FE031 /* FTEnemy.xib */,
+				593B23751660933E004FE031 /* FTEntity.h */,
+				593B23761660933E004FE031 /* FTEntity.m */,
+				593B23771660933E004FE031 /* FTKey.h */,
+				593B23781660933E004FE031 /* FTKey.m */,
+				593B23791660933E004FE031 /* FTPlayer.h */,
+				593B237A1660933E004FE031 /* FTPlayer.m */,
+				593B237B1660933E004FE031 /* FTTile.h */,
+				593B237C1660933E004FE031 /* FTTile.m */,
+				593B237D1660933E004FE031 /* vTile.xib */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		59C9655A15183516005B1120 = {
 			isa = PBXGroup;
 			children = (
-				59C9656F15183516005B1120 /* Dungeon Diver */,
-				59C9658D15183516005B1120 /* Dungeon DiverTests */,
+				593B236D1660933E004FE031 /* Food Trap */,
 				59C9656815183516005B1120 /* Frameworks */,
 				59C9656615183516005B1120 /* Products */,
 			);
@@ -127,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				59C9656515183516005B1120 /* Food Trap.app */,
-				59C9658615183516005B1120 /* Food TrapTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,63 +140,6 @@
 				59C9658715183516005B1120 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		59C9656F15183516005B1120 /* Dungeon Diver */ = {
-			isa = PBXGroup;
-			children = (
-				59310C9F155F68F0005E0DB2 /* Enemies */,
-				59C9657815183516005B1120 /* FTAppDelegate.h */,
-				59C9657915183516005B1120 /* FTAppDelegate.m */,
-				59C9657B15183516005B1120 /* FTViewController.h */,
-				59C9657C15183516005B1120 /* FTViewController.m */,
-				59C9657E15183516005B1120 /* FTViewController.xib */,
-				59C9657015183516005B1120 /* Supporting Files */,
-				59C9659E151836C4005B1120 /* vTile.xib */,
-				59C965A015183732005B1120 /* FTTile.h */,
-				59C965A115183732005B1120 /* FTTile.m */,
-				5971A80E152171D80038E1FC /* FTEntity.h */,
-				5971A80F152171D80038E1FC /* FTEntity.m */,
-				5971A812152171E70038E1FC /* FTPlayer.h */,
-				5971A813152171E70038E1FC /* FTPlayer.m */,
-				5971A815152176B40038E1FC /* vPlayer.xib */,
-				59821D1015241F8600D1475C /* DevTestFlags.h */,
-				59B95F86153A78FC003995D7 /* FTArea.h */,
-				59B95F87153A78FC003995D7 /* FTArea.m */,
-				59B95F8A153B99CD003995D7 /* FTKey.h */,
-				59B95F8B153B99CD003995D7 /* FTKey.m */,
-			);
-			path = "Dungeon Diver";
-			sourceTree = "<group>";
-		};
-		59C9657015183516005B1120 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				59C9657115183516005B1120 /* Food Trap-Info.plist */,
-				59C9657215183516005B1120 /* InfoPlist.strings */,
-				59C9657515183516005B1120 /* main.m */,
-				59C9657715183516005B1120 /* Food Trap-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		59C9658D15183516005B1120 /* Dungeon DiverTests */ = {
-			isa = PBXGroup;
-			children = (
-				59C9659315183516005B1120 /* Dungeon_DiverTests.h */,
-				59C9659415183516005B1120 /* Dungeon_DiverTests.m */,
-				59C9658E15183516005B1120 /* Supporting Files */,
-			);
-			path = "Dungeon DiverTests";
-			sourceTree = "<group>";
-		};
-		59C9658E15183516005B1120 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				59C9658F15183516005B1120 /* Food TrapTests-Info.plist */,
-				59C9659015183516005B1120 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,25 +161,6 @@
 			productName = "Dungeon Diver";
 			productReference = 59C9656515183516005B1120 /* Food Trap.app */;
 			productType = "com.apple.product-type.application";
-		};
-		59C9658515183516005B1120 /* Food TrapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 59C9659B15183516005B1120 /* Build configuration list for PBXNativeTarget "Food TrapTests" */;
-			buildPhases = (
-				59C9658115183516005B1120 /* Sources */,
-				59C9658215183516005B1120 /* Frameworks */,
-				59C9658315183516005B1120 /* Resources */,
-				59C9658415183516005B1120 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				59C9658C15183516005B1120 /* PBXTargetDependency */,
-			);
-			name = "Food TrapTests";
-			productName = "Dungeon DiverTests";
-			productReference = 59C9658615183516005B1120 /* Food TrapTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -262,7 +185,6 @@
 			projectRoot = "";
 			targets = (
 				59C9656415183516005B1120 /* Food Trap */,
-				59C9658515183516005B1120 /* Food TrapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,96 +194,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C9657415183516005B1120 /* InfoPlist.strings in Resources */,
-				59C9658015183516005B1120 /* FTViewController.xib in Resources */,
-				59C9659F151836C4005B1120 /* vTile.xib in Resources */,
-				5971A816152176B40038E1FC /* vPlayer.xib in Resources */,
-				59310CA5155F7879005E0DB2 /* FTEnemy.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59C9658315183516005B1120 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59C9659215183516005B1120 /* InfoPlist.strings in Resources */,
+				593B238C1660933E004FE031 /* FTEnemy.xib in Resources */,
+				593B23911660933E004FE031 /* vTile.xib in Resources */,
+				593B23921660933E004FE031 /* FTViewController.xib in Resources */,
+				593B23931660933E004FE031 /* InfoPlist.strings in Resources */,
+				593B23941660933E004FE031 /* Food Trap-Info.plist in Resources */,
+				593B23981660933E004FE031 /* vPlayer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		59C9658415183516005B1120 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		59C9656115183516005B1120 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C9657615183516005B1120 /* main.m in Sources */,
-				59C9657A15183516005B1120 /* FTAppDelegate.m in Sources */,
-				59C9657D15183516005B1120 /* FTViewController.m in Sources */,
-				59C965A215183732005B1120 /* FTTile.m in Sources */,
-				5971A810152171D80038E1FC /* FTEntity.m in Sources */,
-				5971A814152171E70038E1FC /* FTPlayer.m in Sources */,
-				59B95F88153A78FC003995D7 /* FTArea.m in Sources */,
-				59B95F8C153B99CD003995D7 /* FTKey.m in Sources */,
-				59310CA3155F690D005E0DB2 /* FTEnemy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59C9658115183516005B1120 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59C9659515183516005B1120 /* Dungeon_DiverTests.m in Sources */,
+				593B238A1660933E004FE031 /* FTArea.m in Sources */,
+				593B238B1660933E004FE031 /* FTEnemy.m in Sources */,
+				593B238D1660933E004FE031 /* FTEntity.m in Sources */,
+				593B238E1660933E004FE031 /* FTKey.m in Sources */,
+				593B238F1660933E004FE031 /* FTPlayer.m in Sources */,
+				593B23901660933E004FE031 /* FTTile.m in Sources */,
+				593B23951660933E004FE031 /* FTAppDelegate.m in Sources */,
+				593B23961660933E004FE031 /* FTViewController.m in Sources */,
+				593B23971660933E004FE031 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		59C9658C15183516005B1120 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 59C9656415183516005B1120 /* Food Trap */;
-			targetProxy = 59C9658B15183516005B1120 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		59C9657215183516005B1120 /* InfoPlist.strings */ = {
+		593B237E1660933E004FE031 /* FTViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				59C9657315183516005B1120 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		59C9657E15183516005B1120 /* FTViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59C9657F15183516005B1120 /* en */,
+				593B237F1660933E004FE031 /* en */,
 			);
 			name = FTViewController.xib;
 			sourceTree = "<group>";
 		};
-		59C9659015183516005B1120 /* InfoPlist.strings */ = {
+		593B23801660933E004FE031 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				59C9659115183516005B1120 /* en */,
+				593B23811660933E004FE031 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -423,8 +298,8 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Dungeon Diver/Food Trap-Prefix.pch";
-				INFOPLIST_FILE = "Dungeon Diver/Food Trap-Info.plist";
+				GCC_PREFIX_HEADER = "Food Trap/Food Trap-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Food Trap/Food Trap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Food Trap";
 				PROVISIONING_PROFILE = "";
@@ -437,46 +312,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Dungeon Diver/Food Trap-Prefix.pch";
-				INFOPLIST_FILE = "Dungeon Diver/Food Trap-Info.plist";
+				GCC_PREFIX_HEADER = "Food Trap/Food Trap-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Food Trap/Food Trap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Food Trap";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		59C9659C15183516005B1120 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dungeon Diver.app/Dungeon Diver";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Dungeon Diver/Dungeon Diver-Prefix.pch";
-				INFOPLIST_FILE = "Dungeon DiverTests/Food TrapTests-Info.plist";
-				PRODUCT_NAME = "Food TrapTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		59C9659D15183516005B1120 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Dungeon Diver.app/Dungeon Diver";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Dungeon Diver/Dungeon Diver-Prefix.pch";
-				INFOPLIST_FILE = "Dungeon DiverTests/Food TrapTests-Info.plist";
-				PRODUCT_NAME = "Food TrapTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -497,15 +338,6 @@
 			buildConfigurations = (
 				59C9659915183516005B1120 /* Debug */,
 				59C9659A15183516005B1120 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59C9659B15183516005B1120 /* Build configuration list for PBXNativeTarget "Food TrapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59C9659C15183516005B1120 /* Debug */,
-				59C9659D15183516005B1120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

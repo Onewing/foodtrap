@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "59C9656415183516005B1120"
-               BuildableName = "Dungeon Diver.app"
+               BuildableName = "Food Trap.app"
                BlueprintName = "Food Trap"
                ReferencedContainer = "container:Food Trap.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59C9656415183516005B1120"
-            BuildableName = "Dungeon Diver.app"
+            BuildableName = "Food Trap.app"
             BlueprintName = "Food Trap"
             ReferencedContainer = "container:Food Trap.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59C9656415183516005B1120"
-            BuildableName = "Dungeon Diver.app"
+            BuildableName = "Food Trap.app"
             BlueprintName = "Food Trap"
             ReferencedContainer = "container:Food Trap.xcodeproj">
          </BuildableReference>
@@ -79,7 +79,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59C9656415183516005B1120"
-            BuildableName = "Dungeon Diver.app"
+            BuildableName = "Food Trap.app"
             BlueprintName = "Food Trap"
             ReferencedContainer = "container:Food Trap.xcodeproj">
          </BuildableReference>
