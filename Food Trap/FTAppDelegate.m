@@ -7,7 +7,7 @@
 //
 
 #import "FTAppDelegate.h"
-
+#import "GameViewController.h"
 #import "FTViewController.h"
 
 @implementation FTAppDelegate
@@ -19,7 +19,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[FTViewController alloc] initWithNibName:@"FTViewController" bundle:nil];
+	self.viewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

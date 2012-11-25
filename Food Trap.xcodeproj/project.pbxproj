@@ -22,6 +22,9 @@
 		593B23961660933E004FE031 /* FTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23871660933E004FE031 /* FTViewController.m */; };
 		593B23971660933E004FE031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23881660933E004FE031 /* main.m */; };
 		593B23981660933E004FE031 /* vPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23891660933E004FE031 /* vPlayer.xib */; };
+		593B23A81662DA68004FE031 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23A71662DA68004FE031 /* GameViewController.m */; };
+		593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B23A91662DDB3004FE031 /* QuartzCore.framework */; };
+		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
 		59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656D15183516005B1120 /* CoreGraphics.framework */; };
@@ -53,6 +56,10 @@
 		593B23871660933E004FE031 /* FTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTViewController.m; sourceTree = "<group>"; };
 		593B23881660933E004FE031 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		593B23891660933E004FE031 /* vPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vPlayer.xib; sourceTree = "<group>"; };
+		593B23A61662DA68004FE031 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		593B23A71662DA68004FE031 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		593B23A91662DDB3004FE031 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		593B23AB1662DE04004FE031 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9656915183516005B1120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59C9656B15183516005B1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */,
 				59C9656A15183516005B1120 /* UIKit.framework in Frameworks */,
 				59C9656C15183516005B1120 /* Foundation.framework in Frameworks */,
 				59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +118,9 @@
 				593B237B1660933E004FE031 /* FTTile.h */,
 				593B237C1660933E004FE031 /* FTTile.m */,
 				593B237D1660933E004FE031 /* vTile.xib */,
+				593B23A61662DA68004FE031 /* GameViewController.h */,
+				593B23A71662DA68004FE031 /* GameViewController.m */,
+				593B23AB1662DE04004FE031 /* GameViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 		59C9655A15183516005B1120 = {
 			isa = PBXGroup;
 			children = (
+				593B23A91662DDB3004FE031 /* QuartzCore.framework */,
 				593B236D1660933E004FE031 /* Food Trap */,
 				59C9656815183516005B1120 /* Frameworks */,
 				59C9656615183516005B1120 /* Products */,
@@ -200,6 +212,7 @@
 				593B23931660933E004FE031 /* InfoPlist.strings in Resources */,
 				593B23941660933E004FE031 /* Food Trap-Info.plist in Resources */,
 				593B23981660933E004FE031 /* vPlayer.xib in Resources */,
+				593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +232,7 @@
 				593B23951660933E004FE031 /* FTAppDelegate.m in Sources */,
 				593B23961660933E004FE031 /* FTViewController.m in Sources */,
 				593B23971660933E004FE031 /* main.m in Sources */,
+				593B23A81662DA68004FE031 /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
