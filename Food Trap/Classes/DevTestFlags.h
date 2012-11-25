@@ -1,9 +1,8 @@
 ///
 ///  DevTestFlags.m
-///  sams_club
 ///
-///  Created by Steven Silvey on 1/19/12.
-///  Copyright 2012 Rockfish. All rights reserved.
+///
+///  Created by Steven Silvey on 11/24/12.
 ///
 
 
