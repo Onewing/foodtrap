@@ -39,9 +39,9 @@
 }
 
 -(void)drawEnemies {
-	for(FTEnemy *enemy in self.arrEnemies) {
-		[enemy.view drawRect:enemy.view.frame];
-	}
+//	for(FTEnemy *enemy in self.arrEnemies) {
+//		[enemy.view drawRect:enemy.view.frame];
+//	}
 }
 
 -(void)render {
@@ -592,36 +592,36 @@
 	/// NOTE:  A space in a path can be created if the adjacent tiles only amount to one open tile
 	/// NOTE:  All tiles around an open path are put in a pending state
 	
-	/// Pick a location for the start
-	int startX = arc4random() % MAXX;
-	int startY = arc4random() % MAXY;
-	FTTile *startTile = [self getTileAtX:startX Y:startY];
-	FTPlayer *player = [[FTPlayer alloc] initWithNibName:@"vPlayer" bundle:nil];
-	CGRect frame = player.view.frame;
-	frame.origin = CGPointMake(startX*TILEW, startY*TILEH);
-	frame.size = CGSizeMake(TILEW, TILEH);
-	[player.view setFrame:frame];
-	player.x = startX;
-	player.y = startY;
-	self.player = player;
-	[self.view addSubview:player.view];
-	
-	[self makePath:startTile endState:END steps:17];
-	[startTile setDiscovered:YES];
-	[startTile setState:START];
-	for(FTTile *adj in [self adjacentSpotsAround:startTile]) {
-		if (adj.state != CLOSED) {
-			[adj setDiscovered:YES];
-			[adj setVisibility:1.0f];
-			for(FTTile *adjadj in [self adjacentSpotsAround:adj]) {
-				if (adjadj.visibility == 0.15f) {
-					[adjadj setVisibility:0.5f];
-					[adjadj setDiscovered:YES];
-				}
-			}	
-		}
-		
-	}
+//	/// Pick a location for the start
+//	int startX = arc4random() % MAXX;
+//	int startY = arc4random() % MAXY;
+//	FTTile *startTile = [self getTileAtX:startX Y:startY];
+//	FTPlayer *player = [[FTPlayer alloc] initWithNibName:@"vPlayer" bundle:nil];
+//	CGRect frame = player.view.frame;
+//	frame.origin = CGPointMake(startX*TILEW, startY*TILEH);
+//	frame.size = CGSizeMake(TILEW, TILEH);
+//	[player.view setFrame:frame];
+//	player.x = startX;
+//	player.y = startY;
+//	self.player = player;
+//	[self.view addSubview:player.view];
+//	
+//	[self makePath:startTile endState:END steps:17];
+//	[startTile setDiscovered:YES];
+//	[startTile setState:START];
+//	for(FTTile *adj in [self adjacentSpotsAround:startTile]) {
+//		if (adj.state != CLOSED) {
+//			[adj setDiscovered:YES];
+//			[adj setVisibility:1.0f];
+//			for(FTTile *adjadj in [self adjacentSpotsAround:adj]) {
+//				if (adjadj.visibility == 0.15f) {
+//					[adjadj setVisibility:0.5f];
+//					[adjadj setDiscovered:YES];
+//				}
+//			}	
+//		}
+//		
+//	}
 	
 	
 	/// Step 2: Create deadends
@@ -734,155 +734,155 @@
 	//		Add the newly reachable gateways
 	//		Repeat
 	
-	/// Write down reachable area
-	NSMutableArray *reachableArea = [[NSMutableArray alloc] init];
-	FTArea *startArea = [self getArea:startTile.area];
-	[reachableArea addObject:startArea];
+//	/// Write down reachable area
+//	NSMutableArray *reachableArea = [[NSMutableArray alloc] init];
+//	FTArea *startArea = [self getArea:startTile.area];
+//	[reachableArea addObject:startArea];
+//	
+//	/// Write down reachable gateways
+//	NSMutableArray *reachableGateways = [[NSMutableArray alloc] init];
+//	for(FTArea *reachable in reachableArea) {
+//		for(FTTile *gateway in self.gateways) {
+//			if (gateway.gatewayArea1 == reachable.area || gateway.gatewayArea2 == reachable.area) {
+//				[reachableGateways addObject:gateway];
+//				[reachable.gateways addObject:gateway];
+//			}
+//		}
+//	}
 	
-	/// Write down reachable gateways
-	NSMutableArray *reachableGateways = [[NSMutableArray alloc] init];
-	for(FTArea *reachable in reachableArea) {
-		for(FTTile *gateway in self.gateways) {
-			if (gateway.gatewayArea1 == reachable.area || gateway.gatewayArea2 == reachable.area) {
-				[reachableGateways addObject:gateway];
-				[reachable.gateways addObject:gateway];
-			}
-		}
-	}
+//	while(reachableGateways.count > 0) {
+//		FTTile *unlockedGateway = nil;
+//		FTTile *deniedGateway = nil;
+//		/// If only 1 reachable gateway, key must be in reachable area
+//		if (reachableGateways.count == 1) {
+//			NSLog(@"case 1");
+//			FTTile *reachableGateway = [reachableGateways objectAtIndex:0];
+//			if([self placeKey:reachableGateway.gatewayCode inArea:reachableArea]) {
+//				
+//				// Pop the reachable gateway from the list
+//				// For now, brute-forcing it and telling the later steps not to add this back
+//				reachableGateway.matchingKey = YES;		/// Basically means I unlocked this gateway
+//				[reachableGateways removeObject:reachableGateway];
+//				unlockedGateway = reachableGateway;
+//				
+//				
+//			}
+//			// Determine if subsequent gateways (if more than 2) one by one via the choice
+//			//????
+//		}
+//		else if(reachableGateways.count > 1) {
+//			/// Otherwise, pick two gateways and make a choice
+//			NSLog(@"case 2");
+//			FTTile *reachableGateway1 = [reachableGateways objectAtIndex:0];
+//			FTTile *reachableGateway2 = [reachableGateways objectAtIndex:1];
+//			FTTile *reachableGateway;
+//			FTTile *notReachableGateway;
+//			
+//			///	Choice:  Either gateway A's key is in reachable area or not
+//			int choice = arc4random() % 100;
+//			if (choice < 50) {
+//				reachableGateway = reachableGateway1;
+//				notReachableGateway = reachableGateway2;
+//			}
+//			else {
+//				reachableGateway = reachableGateway2;
+//				notReachableGateway = reachableGateway1;
+//				
+//			}
+//			
+//			// Pick the area and place the key that is reachable
+//			if([self placeKey:reachableGateway.gatewayCode inArea:reachableArea]) {
+//				if (unlockedGateway.gatewayCode != notReachableGateway.gatewayCode) {
+//					deniedGateway = notReachableGateway;
+//				}
+//
+//				
+//				
+//				
+//				// Pop the reachable gateway from the list
+//				// For now, brute-forcing it and telling the later steps not to add this back
+//				reachableGateway.matchingKey = YES;		/// Basically means I unlocked this gateway
+//				[reachableGateways removeObject:reachableGateway];
+//				unlockedGateway = reachableGateway;
+//				
+//				
+//				
+//				// Determine if subsequent gateways (if more than 2) one by one via the choice
+//				//????
+//			}
+//			
+//			
+//		}
+//		else {
+//			NSLog(@"Error!");
+//			
+//		}
+//		
+//		// Add the newly reached area
+//		int discoveredAreaCode = [self discoverNewArea:unlockedGateway using:reachableArea];
+//		if (discoveredAreaCode != -1) {
+//			// All reachable areas are marked as not able to hold the non-reachable key
+//			if (deniedGateway) {
+//				[self doNotPlaceKey:deniedGateway.gatewayCode inArea:reachableArea];
+//			}
+//			
+//			/// Add new area (where an denied key could be)
+//			FTArea *discoveredArea = [self getArea:discoveredAreaCode];
+//			[reachableArea addObject:discoveredArea];
+//			
+//			for(FTTile *gateway in self.gateways) {
+//				if (gateway.gatewayArea1 == discoveredArea.area || gateway.gatewayArea2 == discoveredArea.area) {
+//					if (![reachableGateways containsObject:gateway] && !gateway.matchingKey) {
+//						[reachableGateways addObject:gateway];	
+//						[discoveredArea.gateways addObject:gateway];
+//					}
+//				}
+//			}
+//			
+//			
+//			
+//		}
+//		else {
+//			NSLog(@"shift through");
+//			if ([reachableGateways count] > 0) {
+//				FTTile *sendToBack = [reachableGateways objectAtIndex:0];
+//				[reachableGateways removeObjectAtIndex:0];
+//				[reachableGateways addObject:sendToBack];	
+//			}
+//			
+//		}
+//	}
 	
-	while(reachableGateways.count > 0) {
-		FTTile *unlockedGateway = nil;
-		FTTile *deniedGateway = nil;
-		/// If only 1 reachable gateway, key must be in reachable area
-		if (reachableGateways.count == 1) {
-			NSLog(@"case 1");
-			FTTile *reachableGateway = [reachableGateways objectAtIndex:0];
-			if([self placeKey:reachableGateway.gatewayCode inArea:reachableArea]) {
-				
-				// Pop the reachable gateway from the list
-				// For now, brute-forcing it and telling the later steps not to add this back
-				reachableGateway.matchingKey = YES;		/// Basically means I unlocked this gateway
-				[reachableGateways removeObject:reachableGateway];
-				unlockedGateway = reachableGateway;
-				
-				
-			}
-			// Determine if subsequent gateways (if more than 2) one by one via the choice
-			//????
-		}
-		else if(reachableGateways.count > 1) {
-			/// Otherwise, pick two gateways and make a choice
-			NSLog(@"case 2");
-			FTTile *reachableGateway1 = [reachableGateways objectAtIndex:0];
-			FTTile *reachableGateway2 = [reachableGateways objectAtIndex:1];
-			FTTile *reachableGateway;
-			FTTile *notReachableGateway;
-			
-			///	Choice:  Either gateway A's key is in reachable area or not
-			int choice = arc4random() % 100;
-			if (choice < 50) {
-				reachableGateway = reachableGateway1;
-				notReachableGateway = reachableGateway2;
-			}
-			else {
-				reachableGateway = reachableGateway2;
-				notReachableGateway = reachableGateway1;
-				
-			}
-			
-			// Pick the area and place the key that is reachable
-			if([self placeKey:reachableGateway.gatewayCode inArea:reachableArea]) {
-				if (unlockedGateway.gatewayCode != notReachableGateway.gatewayCode) {
-					deniedGateway = notReachableGateway;
-				}
-
-				
-				
-				
-				// Pop the reachable gateway from the list
-				// For now, brute-forcing it and telling the later steps not to add this back
-				reachableGateway.matchingKey = YES;		/// Basically means I unlocked this gateway
-				[reachableGateways removeObject:reachableGateway];
-				unlockedGateway = reachableGateway;
-				
-				
-				
-				// Determine if subsequent gateways (if more than 2) one by one via the choice
-				//????
-			}
-			
-			
-		}
-		else {
-			NSLog(@"Error!");
-			
-		}
-		
-		// Add the newly reached area
-		int discoveredAreaCode = [self discoverNewArea:unlockedGateway using:reachableArea];
-		if (discoveredAreaCode != -1) {
-			// All reachable areas are marked as not able to hold the non-reachable key
-			if (deniedGateway) {
-				[self doNotPlaceKey:deniedGateway.gatewayCode inArea:reachableArea];
-			}
-			
-			/// Add new area (where an denied key could be)
-			FTArea *discoveredArea = [self getArea:discoveredAreaCode];
-			[reachableArea addObject:discoveredArea];
-			
-			for(FTTile *gateway in self.gateways) {
-				if (gateway.gatewayArea1 == discoveredArea.area || gateway.gatewayArea2 == discoveredArea.area) {
-					if (![reachableGateways containsObject:gateway] && !gateway.matchingKey) {
-						[reachableGateways addObject:gateway];	
-						[discoveredArea.gateways addObject:gateway];
-					}
-				}
-			}
-			
-			
-			
-		}
-		else {
-			NSLog(@"shift through");
-			if ([reachableGateways count] > 0) {
-				FTTile *sendToBack = [reachableGateways objectAtIndex:0];
-				[reachableGateways removeObjectAtIndex:0];
-				[reachableGateways addObject:sendToBack];	
-			}
-			
-		}
-	}
-	
-	/// Analyze:  Deterimine if an area could potentially be unavailable if making a ceratin set of choices
-	NSLog(@"\n\n\n\n\n\n\n\n\n#############################################\n\n");
-	[self analyzeAreas:[NSArray arrayWithObject:startArea]];
-	for(FTArea *area in self.allAreas) {
-		if (area.canGetLockedOutOf) {
-			for(FTTile *tile in self.level) {
-				if (tile.area == area.area) {
-					tile.harder = YES;
-				}
-			}
-		}
-		
-	}
+//	/// Analyze:  Deterimine if an area could potentially be unavailable if making a ceratin set of choices
+//	NSLog(@"\n\n\n\n\n\n\n\n\n#############################################\n\n");
+//	[self analyzeAreas:[NSArray arrayWithObject:startArea]];
+//	for(FTArea *area in self.allAreas) {
+//		if (area.canGetLockedOutOf) {
+//			for(FTTile *tile in self.level) {
+//				if (tile.area == area.area) {
+//					tile.harder = YES;
+//				}
+//			}
+//		}
+//		
+//	}
 	
 	
-	/// Step 8:  Put down some enemies
-	int enemyCount = 3;
-	self.arrEnemies = [NSMutableArray array];
-	while(enemyCount > 0) {
-		FTTile *potentialEnemyTile = [self.arrOpenTiles objectAtIndex:(arc4random() % self.arrOpenTiles.count)];
-		if (!potentialEnemyTile.gateway) {
-			FTEnemy *newEnemy = [[FTEnemy alloc] init];
-			[newEnemy moveTo:potentialEnemyTile];
-			[self.view addSubview:newEnemy.view];
-			[self.arrEnemies addObject:newEnemy];
-			enemyCount--;
-		}
-		
-		
-	}
+//	/// Step 8:  Put down some enemies
+//	int enemyCount = 3;
+//	self.arrEnemies = [NSMutableArray array];
+//	while(enemyCount > 0) {
+//		FTTile *potentialEnemyTile = [self.arrOpenTiles objectAtIndex:(arc4random() % self.arrOpenTiles.count)];
+//		if (!potentialEnemyTile.gateway) {
+//			FTEnemy *newEnemy = [[FTEnemy alloc] init];
+//			[newEnemy moveTo:potentialEnemyTile];
+//			[self.view addSubview:newEnemy.view];
+//			[self.arrEnemies addObject:newEnemy];
+//			enemyCount--;
+//		}
+//		
+//		
+//	}
 	
 	
 	

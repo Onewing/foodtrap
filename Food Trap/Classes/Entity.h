@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FTTile.h"
 
-@interface FTEntity : UIViewController
+@interface Entity : NSObject
 
 @property (nonatomic, assign) NSInteger x,y;
 

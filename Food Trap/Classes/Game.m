@@ -7,6 +7,8 @@
 //
 
 #import "Game.h"
+#import "ScreenManager.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @implementation Game
@@ -43,11 +45,22 @@ static Game *sharedGame = nil;
 #pragma mark -
 #pragma mark Methods
 
+-(void)setup {
+    Screen *screen = [[Screen alloc] init];
+    [[ScreenManager sharedScreenManager] addScreen:screen];
+}
+
+
 -(void)gameUpdate:(CADisplayLink *)displayLink {
 //    CGFloat pixelsPerSecond = 100;
 //    CGFloat timeElasped = displayLink.duration * displayLink.frameInterval;
 //    CGFloat actualDistance = pixelsPerSecond * timeElasped;
 //    [self.testing setFrame:CGRectMake(self.testing.frame.origin.x + actualDistance, self.testing.frame.origin.y, 20, 20)];
+    
+    NSArray *screens = [[ScreenManager sharedScreenManager] activeScreens];
+    for(Screen *screen in screens) {
+        
+    }
 }
 
 -(void)gameRender {
@@ -59,6 +72,7 @@ static Game *sharedGame = nil;
     [self gameRender];
     NSLog(@"time:  %f", displayLink.duration);
 }
+
 
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FTEntity.h"
+#import "Entity.h"
 
-@interface FTPlayer : FTEntity
+@interface FTPlayer : Entity
 
 @end

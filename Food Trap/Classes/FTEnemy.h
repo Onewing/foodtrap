@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FTEntity.h"
+#import "Entity.h"
 
-@interface FTEnemy : FTEntity
+@interface FTEnemy : Entity
 
 @end
 

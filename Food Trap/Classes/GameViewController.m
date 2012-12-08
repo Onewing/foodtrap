@@ -36,12 +36,13 @@
     [super viewDidLoad];
     
     Game *game = [Game sharedGame];
+    [game setup];
     
 	// Do any additional setup after loading the view.
     BOOL running = NO;
-    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
-    [self.testing setBackgroundColor:[UIColor redColor]];
-    [self.view addSubview:self.testing];
+//    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
+//    [self.testing setBackgroundColor:[UIColor redColor]];
+//    [self.view addSubview:self.testing];
     if (!running)
 	{
 #warning "Need to review this!  See bookmarks for where I got this code"

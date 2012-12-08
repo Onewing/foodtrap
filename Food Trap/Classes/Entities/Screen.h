@@ -1,5 +1,5 @@
 //
-//  Game.h
+//  Screen.h
 //  Food Trap
 //
 //  Created by Steven Silvey on 12/8/12.
@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
-@interface Game : NSObject
-+(Game *) sharedGame;
+@interface Screen : Entity
 
--(void)setup;
 @end
