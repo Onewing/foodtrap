@@ -13,7 +13,10 @@
 @interface ScreenManager : NSObject
 +(ScreenManager *) sharedScreenManager;
 
+
 -(NSArray *)activeScreens;
 -(void)addScreen:(Screen *)screen;
+-(void)addToDisplayArea:(UIView *)something;
+-(void)setDisplayArea:(UIView *)_displayArea;
 
 @end

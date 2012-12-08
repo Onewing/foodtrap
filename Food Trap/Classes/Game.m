@@ -8,6 +8,7 @@
 
 #import "Game.h"
 #import "ScreenManager.h"
+#import "SplashScreen.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -45,21 +46,21 @@ static Game *sharedGame = nil;
 #pragma mark -
 #pragma mark Methods
 
--(void)setup {
-    Screen *screen = [[Screen alloc] init];
+-(void)setup:(UIView *)withScreen {
+    [[ScreenManager sharedScreenManager] setDisplayArea:withScreen];
+    
+    SplashScreen *screen = [[SplashScreen alloc] init];
+    [screen setup];
     [[ScreenManager sharedScreenManager] addScreen:screen];
+    
 }
 
 
 -(void)gameUpdate:(CADisplayLink *)displayLink {
-//    CGFloat pixelsPerSecond = 100;
-//    CGFloat timeElasped = displayLink.duration * displayLink.frameInterval;
-//    CGFloat actualDistance = pixelsPerSecond * timeElasped;
-//    [self.testing setFrame:CGRectMake(self.testing.frame.origin.x + actualDistance, self.testing.frame.origin.y, 20, 20)];
     
     NSArray *screens = [[ScreenManager sharedScreenManager] activeScreens];
     for(Screen *screen in screens) {
-        
+        [screen update:displayLink];
     }
 }
 

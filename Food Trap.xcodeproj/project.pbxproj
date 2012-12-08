@@ -28,6 +28,7 @@
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59AE33C11673E455007BE47E /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C01673E455007BE47E /* ScreenManager.m */; };
 		59AE33C51673E53F007BE47E /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C41673E53F007BE47E /* Screen.m */; };
+		59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C81673EC94007BE47E /* SplashScreen.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
 		59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656D15183516005B1120 /* CoreGraphics.framework */; };
@@ -69,6 +70,8 @@
 		59AE33C01673E455007BE47E /* ScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenManager.m; sourceTree = "<group>"; };
 		59AE33C31673E53F007BE47E /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Entities/Screen.h; sourceTree = "<group>"; };
 		59AE33C41673E53F007BE47E /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Entities/Screen.m; sourceTree = "<group>"; };
+		59AE33C71673EC94007BE47E /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreen.h; path = Entities/Screens/SplashScreen.h; sourceTree = "<group>"; };
+		59AE33C81673EC94007BE47E /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreen.m; path = Entities/Screens/SplashScreen.m; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9656915183516005B1120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59C9656B15183516005B1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,12 +143,22 @@
 		59AE33C21673E4C6007BE47E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				59AE33C61673EC6C007BE47E /* Screens */,
 				593B23751660933E004FE031 /* Entity.h */,
 				593B23761660933E004FE031 /* Entity.m */,
-				59AE33C31673E53F007BE47E /* Screen.h */,
-				59AE33C41673E53F007BE47E /* Screen.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		59AE33C61673EC6C007BE47E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				59AE33C31673E53F007BE47E /* Screen.h */,
+				59AE33C41673E53F007BE47E /* Screen.m */,
+				59AE33C71673EC94007BE47E /* SplashScreen.h */,
+				59AE33C81673EC94007BE47E /* SplashScreen.m */,
+			);
+			name = Screens;
 			sourceTree = "<group>";
 		};
 		59C9655A15183516005B1120 = {
@@ -259,6 +272,7 @@
 				59AE33B71673E02F007BE47E /* Game.m in Sources */,
 				59AE33C11673E455007BE47E /* ScreenManager.m in Sources */,
 				59AE33C51673E53F007BE47E /* Screen.m in Sources */,
+				59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

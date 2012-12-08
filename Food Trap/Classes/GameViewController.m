@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     Game *game = [Game sharedGame];
-    [game setup];
+    [game setup:self.view];
     
 	// Do any additional setup after loading the view.
     BOOL running = NO;

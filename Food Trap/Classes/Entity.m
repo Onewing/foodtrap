@@ -13,6 +13,10 @@
 
 @synthesize x=_x, y=_y;
 
+-(void)update:(CADisplayLink *)displayLink {
+    
+}
+
 -(void)setLocation:(FTTile *)tile {
 	self.x = tile.x;
 	self.y = tile.y;

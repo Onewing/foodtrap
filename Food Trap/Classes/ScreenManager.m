@@ -18,7 +18,7 @@
 
 
 @implementation ScreenManager
-
+static UIView *displayArea;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -65,6 +65,18 @@ static ScreenManager *sharedScreenManager = nil;
     NSMutableArray *screens = [NSMutableArray arrayWithArray:self.screens];
     [screens addObject:screen];
     self.screens = screens;
+}
+
+-(void)addToDisplayArea:(UIView *)something {
+    if(displayArea == nil) {
+        NSLog(@"The display area has not been set yet!");
+        return;
+    }
+    [displayArea addSubview:something];
+}
+
+-(void)setDisplayArea:(UIView *)_displayArea {
+    displayArea = _displayArea;
 }
 
 @end

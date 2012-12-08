@@ -11,5 +11,5 @@
 @interface Game : NSObject
 +(Game *) sharedGame;
 
--(void)setup;
+-(void)setup:(UIView *)withScreen;
 @end

@@ -1,5 +1,5 @@
 //
-//  Screen.h
+//  SplashScreen.h
 //  Food Trap
 //
 //  Created by Steven Silvey on 12/8/12.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Entity.h"
+#import "Screen.h"
 
+@interface SplashScreen : Screen
 
-@interface Screen : Entity
-
--(void)display:(UIView *)something;
--(void)setup;
 
 @end

@@ -15,4 +15,6 @@
 
 -(void)moveTo:(FTTile *)tile;
 
+-(void)update:(CADisplayLink *)displayLink;
+
 @end
