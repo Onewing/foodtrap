@@ -16,17 +16,7 @@
 
 @implementation GameViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 -(void)gameUpdate:(CADisplayLink *)displayLink {
-    NSLog(@"test");
     CGFloat pixelsPerSecond = 100;
     CGFloat timeElasped = displayLink.duration * displayLink.frameInterval;
     CGFloat actualDistance = pixelsPerSecond * timeElasped;
@@ -42,6 +32,20 @@
     [self gameRender];
     NSLog(@"time:  %f", displayLink.duration);
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Life Cycle
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
