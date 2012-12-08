@@ -16,22 +16,6 @@
 
 @implementation GameViewController
 
--(void)gameUpdate:(CADisplayLink *)displayLink {
-    CGFloat pixelsPerSecond = 100;
-    CGFloat timeElasped = displayLink.duration * displayLink.frameInterval;
-    CGFloat actualDistance = pixelsPerSecond * timeElasped;
-    [self.testing setFrame:CGRectMake(self.testing.frame.origin.x + actualDistance, self.testing.frame.origin.y, 20, 20)];
-}
-
--(void)gameRender {
-    
-}
-
--(void)gameLoop:(CADisplayLink *)displayLink {
-    [self gameUpdate:displayLink];
-    [self gameRender];
-    NSLog(@"time:  %f", displayLink.duration);
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -50,6 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Game *game = [Game sharedGame];
+    
 	// Do any additional setup after loading the view.
     BOOL running = NO;
     self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
@@ -57,9 +44,10 @@
     [self.view addSubview:self.testing];
     if (!running)
 	{
+#warning "Need to review this!  See bookmarks for where I got this code"
 		if (YES) //displayLinkSupported)
 		{
-            CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop:)];
+            CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:game selector:@selector(gameLoop:)];
             [displayLink setFrameInterval:1];   // 1 = 60fps, 2 - 30fps
             [displayLink addToRunLoop:[NSRunLoop mainRunLoop]
                               forMode:NSRunLoopCommonModes];
