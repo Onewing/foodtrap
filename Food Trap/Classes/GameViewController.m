@@ -50,8 +50,7 @@
 		{
             CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:game selector:@selector(gameLoop:)];
             [displayLink setFrameInterval:1];   // 1 = 60fps, 2 - 30fps
-            [displayLink addToRunLoop:[NSRunLoop mainRunLoop]
-                              forMode:NSRunLoopCommonModes];
+            [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
         }
     }
 }

@@ -11,11 +11,27 @@
 
 @implementation Screen
 
+@synthesize active = _active;
+
+-(id)init {
+    if(self = [super init]) {
+        self.active = NO;
+    }
+    
+    return self;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    NSLog(@"touch");
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Methods
 
 -(void)setup {
+    [self setFrame:CGRectMake(0, 0, 320, 480)];
     
 }
 

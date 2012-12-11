@@ -1,5 +1,5 @@
 //
-//  Screen.h
+//  TitleScreen.h
 //  Food Trap
 //
 //  Created by Steven Silvey on 12/8/12.
@@ -7,14 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Entity.h"
+#import "Screen.h"
 
-
-@interface Screen : Entity
-
-@property (nonatomic, assign) BOOL active;
-
--(void)display:(UIView *)something;
--(void)setup;
+@interface TitleScreen : Screen
 
 @end

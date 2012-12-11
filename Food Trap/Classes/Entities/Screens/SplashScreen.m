@@ -15,11 +15,22 @@
 
 @implementation SplashScreen
 
+-(void)showTitle {
+    NSLog(@"Touch");
+}
+
 -(void)setup {
     [super setup];
-    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
+    
+    self.testing = [[UIView alloc] initWithFrame:[self relativeRect:0 y:40 w:20 h:20]];
     [self.testing setBackgroundColor:[UIColor redColor]];
-    [self display:self.testing];
+    [self addSubview:self.testing];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setFrame:[self relativeRect:100 y:300 w:130 h:44]];
+    [btn setTitle:@"Test" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(showTitle) forControlEvents:UIControlEventTouchDown];
+    [self addSubview:btn];
 
 }
 

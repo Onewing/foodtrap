@@ -9,6 +9,7 @@
 #import "Game.h"
 #import "ScreenManager.h"
 #import "SplashScreen.h"
+#import "TitleScreen.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -51,7 +52,13 @@ static Game *sharedGame = nil;
     
     SplashScreen *screen = [[SplashScreen alloc] init];
     [screen setup];
+    screen.active = YES;
     [[ScreenManager sharedScreenManager] addScreen:screen];
+    
+    TitleScreen *screen2 = [[TitleScreen alloc] init];
+    [screen2 setup];
+    [screen2 setLocation:CGPointMake(SCREEN_W/2, 0)];
+    [[ScreenManager sharedScreenManager] addScreen:screen2];
     
 }
 
@@ -71,7 +78,7 @@ static Game *sharedGame = nil;
 -(void)gameLoop:(CADisplayLink *)displayLink {
     [self gameUpdate:displayLink];
     [self gameRender];
-    NSLog(@"time:  %f", displayLink.duration);
+//    NSLog(@"time:  %f", displayLink.duration);
 }
 
 

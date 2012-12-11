@@ -32,9 +32,11 @@
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
 		59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656D15183516005B1120 /* CoreGraphics.framework */; };
+		59E4ABE11673F4E800156AE5 /* TitleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E4ABE01673F4E800156AE5 /* TitleScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590427B416754F950043E07D /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		593B236F1660933E004FE031 /* DevTestFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevTestFlags.h; sourceTree = "<group>"; };
 		593B23701660933E004FE031 /* FTArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTArea.h; sourceTree = "<group>"; };
 		593B23711660933E004FE031 /* FTArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTArea.m; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		59C9656B15183516005B1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59C9656D15183516005B1120 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		59C9658715183516005B1120 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		59E4ABDF1673F4E800156AE5 /* TitleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScreen.h; path = Entities/Screens/TitleScreen.h; sourceTree = "<group>"; };
+		59E4ABE01673F4E800156AE5 /* TitleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleScreen.m; path = Entities/Screens/TitleScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				59AE33B61673E02F007BE47E /* Game.m */,
 				59AE33BF1673E455007BE47E /* ScreenManager.h */,
 				59AE33C01673E455007BE47E /* ScreenManager.m */,
+				590427B416754F950043E07D /* macros.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -157,6 +162,8 @@
 				59AE33C41673E53F007BE47E /* Screen.m */,
 				59AE33C71673EC94007BE47E /* SplashScreen.h */,
 				59AE33C81673EC94007BE47E /* SplashScreen.m */,
+				59E4ABDF1673F4E800156AE5 /* TitleScreen.h */,
+				59E4ABE01673F4E800156AE5 /* TitleScreen.m */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 				59AE33C11673E455007BE47E /* ScreenManager.m in Sources */,
 				59AE33C51673E53F007BE47E /* Screen.m in Sources */,
 				59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */,
+				59E4ABE11673F4E800156AE5 /* TitleScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -896,59 +896,59 @@
 #pragma mark - 
 #pragma mark DDTile Tapped Delegate
 -(void)tileTapped:(FTTile *)tile {
-	FTTile *playersTile = [self getTileAtX:self.player.x Y:self.player.y];
-	NSArray *arrAdj = [self adjacentSpotsAround:playersTile];
-	if ([arrAdj containsObject:tile]) {
-		
-		/// Can't walk through doors!
-		if (tile.gatewayCode != -1) {
-			BOOL blocked = YES;
-			int ndx = 0;
-			for(NSNumber *key in self.collectedKeys) {
-				if ([key intValue] == tile.gatewayCode) {
-					tile.gatewayCode = -1;
-					[self.collectedKeys removeObjectAtIndex:ndx];
-					blocked = NO;
-					break;
-				}
-				ndx++;
-			}
-			if (blocked) {
-				return;
-			}
-			
-		}
-		
-		if (tile.state != CLOSED) {
-			for(FTTile *t in self.level) {
-				[t setVisibility:0.15f];
-			}
-			[self.player moveTo:tile];
-			[tile setVisibility:1.0f];
-			for(FTTile *adj in [self adjacentSpotsAround:tile]) {
-				if (adj.state != CLOSED) {
-					[adj setDiscovered:YES];
-					[adj setVisibility:1.0f];
-					for(FTTile *adjadj in [self adjacentSpotsAround:adj]) {
-						if (adjadj.visibility == 0.15f) {
-							[adjadj setVisibility:0.5f];
-							[adjadj setDiscovered:YES];
-						}
-					}	
-				}
-				
-			}
-
-			/// Collect a key!
-			if (tile.keyCode != -1) {
-				[self.collectedKeys addObject:[NSNumber numberWithInt:tile.keyCode]];
-				tile.keyCode = -1;
-				
-			}
-			[self render];
-		}
-		
-	}
+//	FTTile *playersTile = [self getTileAtX:self.player.x Y:self.player.y];
+//	NSArray *arrAdj = [self adjacentSpotsAround:playersTile];
+//	if ([arrAdj containsObject:tile]) {
+//		
+//		/// Can't walk through doors!
+//		if (tile.gatewayCode != -1) {
+//			BOOL blocked = YES;
+//			int ndx = 0;
+//			for(NSNumber *key in self.collectedKeys) {
+//				if ([key intValue] == tile.gatewayCode) {
+//					tile.gatewayCode = -1;
+//					[self.collectedKeys removeObjectAtIndex:ndx];
+//					blocked = NO;
+//					break;
+//				}
+//				ndx++;
+//			}
+//			if (blocked) {
+//				return;
+//			}
+//			
+//		}
+//		
+//		if (tile.state != CLOSED) {
+//			for(FTTile *t in self.level) {
+//				[t setVisibility:0.15f];
+//			}
+//			[self.player moveTo:tile];
+//			[tile setVisibility:1.0f];
+//			for(FTTile *adj in [self adjacentSpotsAround:tile]) {
+//				if (adj.state != CLOSED) {
+//					[adj setDiscovered:YES];
+//					[adj setVisibility:1.0f];
+//					for(FTTile *adjadj in [self adjacentSpotsAround:adj]) {
+//						if (adjadj.visibility == 0.15f) {
+//							[adjadj setVisibility:0.5f];
+//							[adjadj setDiscovered:YES];
+//						}
+//					}	
+//				}
+//				
+//			}
+//
+//			/// Collect a key!
+//			if (tile.keyCode != -1) {
+//				[self.collectedKeys addObject:[NSNumber numberWithInt:tile.keyCode]];
+//				tile.keyCode = -1;
+//				
+//			}
+//			[self render];
+//		}
+//		
+//	}
 
 	
 }

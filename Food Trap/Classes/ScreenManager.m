@@ -53,7 +53,13 @@ static ScreenManager *sharedScreenManager = nil;
 #pragma mark -
 #pragma mark Methods
 -(NSArray *)activeScreens {
-    return self.screens;
+    NSMutableArray *activeScreens = [NSMutableArray array];
+    for(Screen *scr in self.screens) {
+        if (scr.active) {
+            [activeScreens addObject:scr];
+        }
+    }
+    return activeScreens;
 }
 
 -(void)addScreen:(Screen *)screen {
@@ -65,6 +71,10 @@ static ScreenManager *sharedScreenManager = nil;
     NSMutableArray *screens = [NSMutableArray arrayWithArray:self.screens];
     [screens addObject:screen];
     self.screens = screens;
+    
+    if(screen.active) {
+        [self addToDisplayArea:screen];
+    }
 }
 
 -(void)addToDisplayArea:(UIView *)something {

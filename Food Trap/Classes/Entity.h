@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "FTTile.h"
 
-@interface Entity : NSObject
+@interface Entity : UIView
 
-@property (nonatomic, assign) NSInteger x,y;
-
+-(void)setLocation:(CGPoint)pt;
 -(void)moveTo:(FTTile *)tile;
 
 -(void)update:(CADisplayLink *)displayLink;
+
+-(CGFloat)relativeX:(CGFloat)x;
+-(CGFloat)relativeY:(CGFloat)y;
+-(CGRect)relativeRect:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h;
+
 
 @end

@@ -11,19 +11,35 @@
 
 @implementation Entity
 
-@synthesize x=_x, y=_y;
+//@synthesize x=_x, y=_y;
+
+-(CGFloat)relativeX:(CGFloat)x {
+    return self.frame.origin.x + x;
+}
+
+-(CGFloat)relativeY:(CGFloat)y {
+    return self.frame.origin.y + y;
+}
+
+-(CGRect)relativeRect:(CGFloat)x y:(CGFloat)y w:(CGFloat)w h:(CGFloat)h {
+    return CGRectMake([self relativeX:x], [self relativeY:y], w, h);
+}
 
 -(void)update:(CADisplayLink *)displayLink {
     
 }
 
--(void)setLocation:(FTTile *)tile {
-	self.x = tile.x;
-	self.y = tile.y;
+-(void)setLocation:(CGPoint)pt {
+    [self setFrame:CGRectMake(pt.x, pt.y, self.frame.size.width, self.frame.size.height)];
 }
 
+//-(void)setLocation:(FTTile *)tile {
+////	self.x = tile.x;
+////	self.y = tile.y;
+//}
+
 -(void)setLocationWithParams:(NSDictionary *)params {
-	[self setLocation:[params objectForKey:@"tile"]];
+//	[self setLocation:[params objectForKey:@"tile"]];
 }
 
 -(void)moveTo:(FTTile *)tile {
