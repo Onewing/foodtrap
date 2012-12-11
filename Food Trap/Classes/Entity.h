@@ -11,8 +11,13 @@
 
 @interface Entity : UIView
 
+@property (nonatomic, assign) CGPoint destination;
+@property (nonatomic, assign) CGFloat ax, ay;
+@property (nonatomic, assign) CGFloat distToDest;
+
 -(void)setLocation:(CGPoint)pt;
 -(void)moveTo:(FTTile *)tile;
+-(void)moveToLocation:(CGPoint)pt speed:(CGFloat)pps;
 
 -(void)update:(CADisplayLink *)displayLink;
 

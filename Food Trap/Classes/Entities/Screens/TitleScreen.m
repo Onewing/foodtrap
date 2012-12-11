@@ -12,10 +12,7 @@
 
 -(void)setup {
     [super setup];
-    UIView *testing = [[UIView alloc] initWithFrame:[self relativeRect:0 y:0 w:320 h:480]];
-    [testing setBackgroundColor:[UIColor blueColor]];
-    [self addSubview:testing];
-    
+    [self setBackgroundColor:[UIColor blueColor]];
 }
 
 -(void)update:(CADisplayLink *)displayLink {

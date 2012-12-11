@@ -26,11 +26,36 @@
 }
 
 -(void)update:(CADisplayLink *)displayLink {
-    
+    CGFloat timeElasped = displayLink.duration * displayLink.frameInterval;
+    CGFloat dx = self.ax * timeElasped;
+    CGFloat dy = self.ay * timeElasped;
+    [self setFrame:CGRectMake(self.frame.origin.x + dx, self.frame.origin.y + dy, self.frame.size.width, self.frame.size.height)];
+ 
+    CGFloat dist = abs(self.frame.origin.x - self.destination.x) + abs(self.frame.origin.y - self.destination.y);
+    if(dist < self.distToDest) {
+        self.distToDest = dist;
+    }
+    else {
+        [self setLocation:self.destination];
+    }
 }
 
 -(void)setLocation:(CGPoint)pt {
     [self setFrame:CGRectMake(pt.x, pt.y, self.frame.size.width, self.frame.size.height)];
+    self.ax = 0.0f;
+    self.ay = 0.0f;
+}
+
+-(void)moveToLocation:(CGPoint)pt speed:(CGFloat)pps {
+    self.destination = pt;
+    self.distToDest = abs(self.frame.origin.x - self.destination.x) + abs(self.frame.origin.y - self.destination.y);
+    
+    CGFloat distx = pt.x - self.frame.origin.x;
+    CGFloat disty = pt.y - self.frame.origin.y;
+    CGFloat distz = sqrtf(pow(distx,2) + pow(disty, 2));
+    self.ax = distx/distz * pps;
+    self.ay = disty/distz * pps;
+    
 }
 
 //-(void)setLocation:(FTTile *)tile {
