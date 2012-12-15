@@ -55,12 +55,12 @@ static Game *sharedGame = nil;
     screen.active = YES;
     [[ScreenManager sharedScreenManager] addScreen:screen];
     
-    TitleScreen *screen2 = [[TitleScreen alloc] init];
-    [screen2 setup];
-    [screen2 setLocation:CGPointMake(SCREEN_W/2, 0)];
-    screen2.active = YES;
-    [screen2 moveToLocation:CGPointMake(10, 50) speed:100];
-    [[ScreenManager sharedScreenManager] addScreen:screen2];
+//    TitleScreen *screen2 = [[TitleScreen alloc] init];
+//    [screen2 setup];
+//    [screen2 setLocation:CGPointMake(SCREEN_W/2, 0)];
+//    screen2.active = YES;
+//
+//    [[ScreenManager sharedScreenManager] addScreen:screen2];
     
 }
 

@@ -89,4 +89,11 @@ static ScreenManager *sharedScreenManager = nil;
     displayArea = _displayArea;
 }
 
+-(void)showScreen:(Screen *)screen {
+    [screen setLocation:CGPointMake(SCREEN_W, 0)];
+    screen.active = YES;
+    [self addScreen:screen];
+    
+}
+
 @end
