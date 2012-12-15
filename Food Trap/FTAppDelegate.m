@@ -9,7 +9,6 @@
 #import "FTAppDelegate.h"
 #import "SplashScreen.h"
 #import "GameViewController.h"
-#import "ScreenManager.h"
 #import "FTViewController.h"
 
 @implementation FTAppDelegate

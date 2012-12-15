@@ -7,7 +7,6 @@
 //
 
 #import "Game.h"
-#import "ScreenManager.h"
 #import "SplashScreen.h"
 #import "TitleScreen.h"
 
@@ -61,11 +60,7 @@ static Game *sharedGame = nil;
 
 
 -(void)gameUpdate:(CADisplayLink *)displayLink {
-    
-    NSArray *screens = [[ScreenManager sharedScreenManager] activeScreens];
-    for(Screen *screen in screens) {
-        [screen update:displayLink];
-    }
+    [self.screenManager.active update:displayLink];
 }
 
 -(void)gameRender {

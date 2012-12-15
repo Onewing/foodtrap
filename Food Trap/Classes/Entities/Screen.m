@@ -7,7 +7,7 @@
 //
 
 #import "Screen.h"
-#import "ScreenManager.h"
+
 
 @implementation Screen
 
@@ -36,7 +36,7 @@
 }
 
 -(void)display:(UIView *)something {
-    [[ScreenManager sharedScreenManager] addToDisplayArea:something];
+ 
 }
 
 

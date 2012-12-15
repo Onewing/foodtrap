@@ -7,7 +7,7 @@
 //
 
 #import "GameViewController.h"
-#import "ScreenManager.h"
+#import "SplashScreen.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -36,10 +36,10 @@
 {
     [super viewDidLoad];
     
-    self.splash = [[SplashScreen alloc] init];
-    self.splash.active = YES;
-    [self.view addSubview:self.splash.view];
-    [[ScreenManager sharedScreenManager] addScreen:self.splash];
+    self.active = [[SplashScreen alloc] init];
+    self.active.active = YES;
+    [self.view addSubview:self.active.view];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,9 +49,21 @@
 }
 
 -(void)show:(Screen *)scr {
-    [self.splash.view removeFromSuperview];
-    self.titleScr = [[TitleScreen alloc] init];
-    [self.view addSubview:self.titleScr.view];
+    self.incoming = scr;
+    
+    
+    [self.active viewWillDisappear:YES];
+    [self.incoming viewWillAppear:YES];
+    
+    [self.active.view removeFromSuperview];
+    [self.view addSubview:self.incoming.view];
+    
+    [self.active viewDidDisappear:YES];
+    [self.incoming viewDidAppear:YES];
+    
+    self.active = scr;
+    self.incoming = nil;
+    
 }
 
 @end

@@ -11,4 +11,6 @@
 
 @interface TitleScreen : Screen
 
+-(IBAction)showTitle;
+
 @end

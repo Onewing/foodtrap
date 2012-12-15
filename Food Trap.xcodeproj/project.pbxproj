@@ -26,7 +26,6 @@
 		593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B23A91662DDB3004FE031 /* QuartzCore.framework */; };
 		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
-		59AE33C11673E455007BE47E /* ScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C01673E455007BE47E /* ScreenManager.m */; };
 		59AE33C51673E53F007BE47E /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C41673E53F007BE47E /* Screen.m */; };
 		59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C81673EC94007BE47E /* SplashScreen.m */; };
 		59C56524167C38E50050BBB4 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C56523167C38E50050BBB4 /* SplashScreen.xib */; };
@@ -70,8 +69,6 @@
 		593B23AB1662DE04004FE031 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		59AE33BF1673E455007BE47E /* ScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenManager.h; sourceTree = "<group>"; };
-		59AE33C01673E455007BE47E /* ScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenManager.m; sourceTree = "<group>"; };
 		59AE33C31673E53F007BE47E /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Entities/Screen.h; sourceTree = "<group>"; };
 		59AE33C41673E53F007BE47E /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Entities/Screen.m; sourceTree = "<group>"; };
 		59AE33C71673EC94007BE47E /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreen.h; path = Entities/Screens/SplashScreen.h; sourceTree = "<group>"; };
@@ -142,8 +139,6 @@
 				593B23AB1662DE04004FE031 /* GameViewController.xib */,
 				59AE33B51673E02F007BE47E /* Game.h */,
 				59AE33B61673E02F007BE47E /* Game.m */,
-				59AE33BF1673E455007BE47E /* ScreenManager.h */,
-				59AE33C01673E455007BE47E /* ScreenManager.m */,
 				590427B416754F950043E07D /* macros.h */,
 			);
 			path = Classes;
@@ -285,7 +280,6 @@
 				593B23971660933E004FE031 /* main.m in Sources */,
 				593B23A81662DA68004FE031 /* GameViewController.m in Sources */,
 				59AE33B71673E02F007BE47E /* Game.m in Sources */,
-				59AE33C11673E455007BE47E /* ScreenManager.m in Sources */,
 				59AE33C51673E53F007BE47E /* Screen.m in Sources */,
 				59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */,
 				59E4ABE11673F4E800156AE5 /* TitleScreen.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "TitleScreen.h"
-
+#import "SplashScreen.h"
 @implementation TitleScreen
 
 
@@ -15,5 +15,10 @@
     [super update:displayLink];
 }
 
+-(IBAction)showTitle {
+    NSLog(@"Touch");
+    SplashScreen *vc = [[SplashScreen alloc] init];
+    [[Game sharedGame] show:vc];
+}
 
 @end
