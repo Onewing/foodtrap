@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameViewController.h"
 
 @interface Game : NSObject
 +(Game *) sharedGame;
 
--(void)setup:(UIView *)withScreen;
+@property (nonatomic, strong) GameViewController *screenManager;
+
+-(void)setup;//:(UIView *)withScreen;
+-(void)show:(Screen *)screen;
 @end

@@ -10,10 +10,6 @@
 
 @implementation TitleScreen
 
--(void)setup {
-    [super setup];
-    [self setBackgroundColor:[UIColor blueColor]];
-}
 
 -(void)update:(CADisplayLink *)displayLink {
     [super update:displayLink];

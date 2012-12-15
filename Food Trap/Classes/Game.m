@@ -47,13 +47,8 @@ static Game *sharedGame = nil;
 #pragma mark -
 #pragma mark Methods
 
--(void)setup:(UIView *)withScreen {
-    [[ScreenManager sharedScreenManager] setDisplayArea:withScreen];
-    
-    SplashScreen *screen = [[SplashScreen alloc] init];
-    [screen setup];
-    screen.active = YES;
-    [[ScreenManager sharedScreenManager] addScreen:screen];
+-(void)setup{ //:(UIView *)withScreen {
+//    [[ScreenManager sharedScreenManager] setDisplayArea:withScreen];
     
 //    TitleScreen *screen2 = [[TitleScreen alloc] init];
 //    [screen2 setup];
@@ -83,6 +78,9 @@ static Game *sharedGame = nil;
 //    NSLog(@"time:  %f", displayLink.duration);
 }
 
+-(void)show:(Screen *)screen {
+    [self.screenManager show:screen];
+}
 
 
 @end

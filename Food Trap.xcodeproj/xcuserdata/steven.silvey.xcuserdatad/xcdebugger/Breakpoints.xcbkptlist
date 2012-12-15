@@ -98,13 +98,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Food Trap/Classes/Entities/Screen.m"
-         timestampString = "376788645.305982"
+         filePath = "Food Trap/Classes/ScreenManager.m"
+         timestampString = "377240269.670526"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
-         landmarkName = "-touchesBegan:withEvent:"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "-addToDisplayArea:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

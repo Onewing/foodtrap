@@ -73,7 +73,7 @@ static ScreenManager *sharedScreenManager = nil;
     self.screens = screens;
     
     if(screen.active) {
-        [self addToDisplayArea:screen];
+//        [self addToDisplayArea:screen];
     }
 }
 
@@ -90,9 +90,9 @@ static ScreenManager *sharedScreenManager = nil;
 }
 
 -(void)showScreen:(Screen *)screen {
-    [screen setLocation:CGPointMake(SCREEN_W, 0)];
-    screen.active = YES;
-    [self addScreen:screen];
+//    [screen setLocation:CGPointMake(SCREEN_W, 0)];
+//    screen.active = YES;
+//    [self addScreen:screen];
     
 }
 

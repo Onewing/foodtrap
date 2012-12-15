@@ -30,13 +30,9 @@
 #pragma mark -
 #pragma mark Methods
 
--(void)setup {
-    [self setFrame:CGRectMake(0, 0, 320, 480)];
-    
-}
 
 -(void)update:(CADisplayLink *)displayLink {
-    [super update:displayLink];
+    
 }
 
 -(void)display:(UIView *)something {

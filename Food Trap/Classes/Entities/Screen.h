@@ -10,11 +10,12 @@
 #import "Entity.h"
 
 
-@interface Screen : Entity
+@interface Screen : UIViewController
 
 @property (nonatomic, assign) BOOL active;
 
 -(void)display:(UIView *)something;
--(void)setup;
+
+-(void)update:(CADisplayLink *)displayLink;
 
 @end

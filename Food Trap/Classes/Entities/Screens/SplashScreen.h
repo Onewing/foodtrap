@@ -12,4 +12,6 @@
 @interface SplashScreen : Screen
 
 
+-(IBAction)showTitle;
+
 @end

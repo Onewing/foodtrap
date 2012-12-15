@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SplashScreen.h"
+#import "TitleScreen.h"
+
+
 
 
 @interface GameViewController : UIViewController
+
+@property (nonatomic, strong) SplashScreen *splash;
+@property (nonatomic, strong) TitleScreen *titleScr;
+
+-(void)show:(Screen *)scr;
 
 @end

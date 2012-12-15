@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "ScreenManager.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -35,30 +36,22 @@
 {
     [super viewDidLoad];
     
-    Game *game = [Game sharedGame];
-    [game setup:self.view];
-    
-	// Do any additional setup after loading the view.
-    BOOL running = NO;
-//    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
-//    [self.testing setBackgroundColor:[UIColor redColor]];
-//    [self.view addSubview:self.testing];
-    if (!running)
-	{
-#warning "Need to review this!  See bookmarks for where I got this code"
-		if (YES) //displayLinkSupported)
-		{
-            CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:game selector:@selector(gameLoop:)];
-            [displayLink setFrameInterval:1];   // 1 = 60fps, 2 - 30fps
-            [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        }
-    }
+    self.splash = [[SplashScreen alloc] init];
+    self.splash.active = YES;
+    [self.view addSubview:self.splash.view];
+    [[ScreenManager sharedScreenManager] addScreen:self.splash];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)show:(Screen *)scr {
+    [self.splash.view removeFromSuperview];
+    self.titleScr = [[TitleScreen alloc] init];
+    [self.view addSubview:self.titleScr.view];
 }
 
 @end

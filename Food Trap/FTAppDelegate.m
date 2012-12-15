@@ -7,7 +7,9 @@
 //
 
 #import "FTAppDelegate.h"
+#import "SplashScreen.h"
 #import "GameViewController.h"
+#import "ScreenManager.h"
 #import "FTViewController.h"
 
 @implementation FTAppDelegate
@@ -22,6 +24,28 @@
 	self.viewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+//    self.viewController.active = YES;
+//    [[ScreenManager sharedScreenManager] addScreen:self.viewController];
+    Game *game = [Game sharedGame];
+    [game setup];
+    game.screenManager = self.viewController;
+    
+	// Do any additional setup after loading the view.
+    BOOL running = NO;
+    //    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 40, 20, 20)];
+    //    [self.testing setBackgroundColor:[UIColor redColor]];
+    //    [self.view addSubview:self.testing];
+    if (!running)
+	{
+#warning "Need to review this!  See bookmarks for where I got this code"
+		if (YES) //displayLinkSupported)
+		{
+            CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:game selector:@selector(gameLoop:)];
+            [displayLink setFrameInterval:1];   // 1 = 60fps, 2 - 30fps
+            [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+        }
+    }
     return YES;
 }
 

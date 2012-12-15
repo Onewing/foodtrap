@@ -7,6 +7,7 @@
 //
 
 #import "SplashScreen.h"
+#import "TitleScreen.h"
 
 @interface SplashScreen ()
 @property (nonatomic, strong) UIView *testing;
@@ -15,24 +16,12 @@
 
 @implementation SplashScreen
 
--(void)showTitle {
+-(IBAction)showTitle {
     NSLog(@"Touch");
+    TitleScreen *vc = [[TitleScreen alloc] init];
+    [[Game sharedGame] show:vc];
 }
 
--(void)setup {
-    [super setup];
-    
-    self.testing = [[UIView alloc] initWithFrame:[self relativeRect:0 y:40 w:20 h:20]];
-    [self.testing setBackgroundColor:[UIColor redColor]];
-    [self addSubview:self.testing];
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:[self relativeRect:100 y:300 w:130 h:44]];
-    [btn setTitle:@"Test" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(showTitle) forControlEvents:UIControlEventTouchDown];
-    [self addSubview:btn];
-
-}
 
 -(void)update:(CADisplayLink *)displayLink {
     [super update:displayLink];
@@ -42,6 +31,15 @@
     [self.testing setFrame:CGRectMake(self.testing.frame.origin.x + actualDistance, self.testing.frame.origin.y, 20, 20)];
 
     
+}
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSLog(@"twice");
+    self.testing = [[UIView alloc] initWithFrame:CGRectMake(0, 60, 20, 20)];
+    [self.testing setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:self.testing];
 }
 
 @end
