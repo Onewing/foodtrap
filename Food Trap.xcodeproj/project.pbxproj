@@ -26,14 +26,14 @@
 		593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B23A91662DDB3004FE031 /* QuartzCore.framework */; };
 		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
-		59AE33C51673E53F007BE47E /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C41673E53F007BE47E /* Screen.m */; };
-		59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33C81673EC94007BE47E /* SplashScreen.m */; };
-		59C56524167C38E50050BBB4 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C56523167C38E50050BBB4 /* SplashScreen.xib */; };
-		59C5653D167C4C8F0050BBB4 /* TitleScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C5653C167C4C8F0050BBB4 /* TitleScreen.xib */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
 		59C9656E15183516005B1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656D15183516005B1120 /* CoreGraphics.framework */; };
-		59E4ABE11673F4E800156AE5 /* TitleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E4ABE01673F4E800156AE5 /* TitleScreen.m */; };
+		59F0D3B8167EDDFF00144155 /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F0D3B1167EDDFF00144155 /* Screen.m */; };
+		59F0D3B9167EDDFF00144155 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F0D3B3167EDDFF00144155 /* SplashScreen.m */; };
+		59F0D3BA167EDDFF00144155 /* SplashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F0D3B4167EDDFF00144155 /* SplashScreen.xib */; };
+		59F0D3BB167EDDFF00144155 /* TitleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F0D3B6167EDDFF00144155 /* TitleScreen.m */; };
+		59F0D3BC167EDDFF00144155 /* TitleScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F0D3B7167EDDFF00144155 /* TitleScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,19 +69,19 @@
 		593B23AB1662DE04004FE031 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		59AE33C31673E53F007BE47E /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Entities/Screen.h; sourceTree = "<group>"; };
-		59AE33C41673E53F007BE47E /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Entities/Screen.m; sourceTree = "<group>"; };
-		59AE33C71673EC94007BE47E /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreen.h; path = Entities/Screens/SplashScreen.h; sourceTree = "<group>"; };
-		59AE33C81673EC94007BE47E /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreen.m; path = Entities/Screens/SplashScreen.m; sourceTree = "<group>"; };
-		59C56523167C38E50050BBB4 /* SplashScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashScreen.xib; path = Entities/Screens/SplashScreen.xib; sourceTree = "<group>"; };
-		59C5653C167C4C8F0050BBB4 /* TitleScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TitleScreen.xib; path = Entities/Screens/TitleScreen.xib; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9656915183516005B1120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59C9656B15183516005B1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59C9656D15183516005B1120 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		59C9658715183516005B1120 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		59E4ABDF1673F4E800156AE5 /* TitleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScreen.h; path = Entities/Screens/TitleScreen.h; sourceTree = "<group>"; };
-		59E4ABE01673F4E800156AE5 /* TitleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleScreen.m; path = Entities/Screens/TitleScreen.m; sourceTree = "<group>"; };
+		59F0D3B0167EDDFF00144155 /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		59F0D3B1167EDDFF00144155 /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screen.m; sourceTree = "<group>"; };
+		59F0D3B2167EDDFF00144155 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		59F0D3B3167EDDFF00144155 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		59F0D3B4167EDDFF00144155 /* SplashScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreen.xib; sourceTree = "<group>"; };
+		59F0D3B5167EDDFF00144155 /* TitleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScreen.h; sourceTree = "<group>"; };
+		59F0D3B6167EDDFF00144155 /* TitleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScreen.m; sourceTree = "<group>"; };
+		59F0D3B7167EDDFF00144155 /* TitleScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +120,7 @@
 		593B236E1660933E004FE031 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				59F0D3AF167EDDFF00144155 /* Screens */,
 				59AE33C21673E4C6007BE47E /* Entities */,
 				593B236F1660933E004FE031 /* DevTestFlags.h */,
 				593B23701660933E004FE031 /* FTArea.h */,
@@ -147,26 +148,10 @@
 		59AE33C21673E4C6007BE47E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				59AE33C61673EC6C007BE47E /* Screens */,
 				593B23751660933E004FE031 /* Entity.h */,
 				593B23761660933E004FE031 /* Entity.m */,
 			);
 			name = Entities;
-			sourceTree = "<group>";
-		};
-		59AE33C61673EC6C007BE47E /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				59AE33C31673E53F007BE47E /* Screen.h */,
-				59AE33C41673E53F007BE47E /* Screen.m */,
-				59AE33C71673EC94007BE47E /* SplashScreen.h */,
-				59AE33C81673EC94007BE47E /* SplashScreen.m */,
-				59C56523167C38E50050BBB4 /* SplashScreen.xib */,
-				59E4ABDF1673F4E800156AE5 /* TitleScreen.h */,
-				59E4ABE01673F4E800156AE5 /* TitleScreen.m */,
-				59C5653C167C4C8F0050BBB4 /* TitleScreen.xib */,
-			);
-			name = Screens;
 			sourceTree = "<group>";
 		};
 		59C9655A15183516005B1120 = {
@@ -196,6 +181,21 @@
 				59C9658715183516005B1120 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59F0D3AF167EDDFF00144155 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				59F0D3B0167EDDFF00144155 /* Screen.h */,
+				59F0D3B1167EDDFF00144155 /* Screen.m */,
+				59F0D3B2167EDDFF00144155 /* SplashScreen.h */,
+				59F0D3B3167EDDFF00144155 /* SplashScreen.m */,
+				59F0D3B4167EDDFF00144155 /* SplashScreen.xib */,
+				59F0D3B5167EDDFF00144155 /* TitleScreen.h */,
+				59F0D3B6167EDDFF00144155 /* TitleScreen.m */,
+				59F0D3B7167EDDFF00144155 /* TitleScreen.xib */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +257,8 @@
 				593B23941660933E004FE031 /* Food Trap-Info.plist in Resources */,
 				593B23981660933E004FE031 /* vPlayer.xib in Resources */,
 				593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */,
-				59C56524167C38E50050BBB4 /* SplashScreen.xib in Resources */,
-				59C5653D167C4C8F0050BBB4 /* TitleScreen.xib in Resources */,
+				59F0D3BA167EDDFF00144155 /* SplashScreen.xib in Resources */,
+				59F0D3BC167EDDFF00144155 /* TitleScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +280,9 @@
 				593B23971660933E004FE031 /* main.m in Sources */,
 				593B23A81662DA68004FE031 /* GameViewController.m in Sources */,
 				59AE33B71673E02F007BE47E /* Game.m in Sources */,
-				59AE33C51673E53F007BE47E /* Screen.m in Sources */,
-				59AE33C91673EC94007BE47E /* SplashScreen.m in Sources */,
-				59E4ABE11673F4E800156AE5 /* TitleScreen.m in Sources */,
+				59F0D3B8167EDDFF00144155 /* Screen.m in Sources */,
+				59F0D3B9167EDDFF00144155 /* SplashScreen.m in Sources */,
+				59F0D3BB167EDDFF00144155 /* TitleScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
