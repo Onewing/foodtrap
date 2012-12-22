@@ -1,0 +1,15 @@
+//
+//  Path.h
+//  Food Trap
+//
+//  Created by Steven Silvey on 12/22/12.
+//  Copyright (c) 2012 Rockfish. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+@class Tile;
+@interface Path : NSObject
+
+@property (nonatomic, strong) Tile *to, *from;
+
+@end

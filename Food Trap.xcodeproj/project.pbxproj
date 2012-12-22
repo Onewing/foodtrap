@@ -25,6 +25,8 @@
 		593B23A81662DA68004FE031 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23A71662DA68004FE031 /* GameViewController.m */; };
 		593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B23A91662DDB3004FE031 /* QuartzCore.framework */; };
 		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
+		59654709168592A000DB767B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59654708168592A000DB767B /* Tile.m */; };
+		5965470D168592C200DB767B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965470C168592C200DB767B /* Path.m */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
@@ -67,6 +69,10 @@
 		593B23A71662DA68004FE031 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		593B23A91662DDB3004FE031 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		593B23AB1662DE04004FE031 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		59654707168592A000DB767B /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = Entities/Tile.h; sourceTree = "<group>"; };
+		59654708168592A000DB767B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Entities/Tile.m; sourceTree = "<group>"; };
+		5965470B168592C200DB767B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Path.h; path = Entities/Path.h; sourceTree = "<group>"; };
+		5965470C168592C200DB767B /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Path.m; path = Entities/Path.m; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +156,10 @@
 			children = (
 				593B23751660933E004FE031 /* Entity.h */,
 				593B23761660933E004FE031 /* Entity.m */,
+				59654707168592A000DB767B /* Tile.h */,
+				59654708168592A000DB767B /* Tile.m */,
+				5965470B168592C200DB767B /* Path.h */,
+				5965470C168592C200DB767B /* Path.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -283,6 +293,8 @@
 				59F0D3B8167EDDFF00144155 /* Screen.m in Sources */,
 				59F0D3B9167EDDFF00144155 /* SplashScreen.m in Sources */,
 				59F0D3BB167EDDFF00144155 /* TitleScreen.m in Sources */,
+				59654709168592A000DB767B /* Tile.m in Sources */,
+				5965470D168592C200DB767B /* Path.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
