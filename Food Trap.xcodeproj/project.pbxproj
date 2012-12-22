@@ -27,6 +27,30 @@
 		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
 		59654709168592A000DB767B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59654708168592A000DB767B /* Tile.m */; };
 		5965470D168592C200DB767B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965470C168592C200DB767B /* Path.m */; };
+		5965472216859BC200DB767B /* wall1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471016859BC200DB767B /* wall1.png */; };
+		5965472316859BC200DB767B /* wall1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471116859BC200DB767B /* wall1@2x.png */; };
+		5965472416859BC200DB767B /* wall2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471216859BC200DB767B /* wall2.png */; };
+		5965472516859BC200DB767B /* wall2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471316859BC200DB767B /* wall2@2x.png */; };
+		5965472616859BC200DB767B /* wall3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471416859BC200DB767B /* wall3.png */; };
+		5965472716859BC200DB767B /* wall3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471516859BC200DB767B /* wall3@2x.png */; };
+		5965472816859BC200DB767B /* wall4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471616859BC200DB767B /* wall4.png */; };
+		5965472916859BC200DB767B /* wall4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471716859BC200DB767B /* wall4@2x.png */; };
+		5965472A16859BC200DB767B /* wall5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471816859BC200DB767B /* wall5.png */; };
+		5965472B16859BC200DB767B /* wall5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471916859BC200DB767B /* wall5@2x.png */; };
+		5965472C16859BC200DB767B /* wall6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471A16859BC200DB767B /* wall6.png */; };
+		5965472D16859BC200DB767B /* wall6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471B16859BC200DB767B /* wall6@2x.png */; };
+		5965472E16859BC200DB767B /* wall7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471C16859BC200DB767B /* wall7.png */; };
+		5965472F16859BC200DB767B /* wall7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471D16859BC200DB767B /* wall7@2x.png */; };
+		5965473016859BC200DB767B /* wall8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471E16859BC200DB767B /* wall8.png */; };
+		5965473116859BC200DB767B /* wall8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471F16859BC200DB767B /* wall8@2x.png */; };
+		5965473216859BC200DB767B /* wall9.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965472016859BC200DB767B /* wall9.png */; };
+		5965473316859BC200DB767B /* wall9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965472116859BC200DB767B /* wall9@2x.png */; };
+		5965473616859C0E00DB767B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473516859C0E00DB767B /* Template.xib */; };
+		5965473916859E1E00DB767B /* wall10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965473716859E1E00DB767B /* wall10.png */; };
+		5965473A16859E1E00DB767B /* wall10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965473816859E1E00DB767B /* wall10@2x.png */; };
+		5965473C16859E5C00DB767B /* Level1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473B16859E5C00DB767B /* Level1.xib */; };
+		5965473E1686597D00DB767B /* Tiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473D1686597D00DB767B /* Tiles.xib */; };
+		5965474116865AAA00DB767B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965474016865AAA00DB767B /* Level.m */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
@@ -73,6 +97,31 @@
 		59654708168592A000DB767B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Entities/Tile.m; sourceTree = "<group>"; };
 		5965470B168592C200DB767B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Path.h; path = Entities/Path.h; sourceTree = "<group>"; };
 		5965470C168592C200DB767B /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Path.m; path = Entities/Path.m; sourceTree = "<group>"; };
+		5965471016859BC200DB767B /* wall1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall1.png; path = Resources/Walls/wall1.png; sourceTree = "<group>"; };
+		5965471116859BC200DB767B /* wall1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall1@2x.png"; path = "Resources/Walls/wall1@2x.png"; sourceTree = "<group>"; };
+		5965471216859BC200DB767B /* wall2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall2.png; path = Resources/Walls/wall2.png; sourceTree = "<group>"; };
+		5965471316859BC200DB767B /* wall2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall2@2x.png"; path = "Resources/Walls/wall2@2x.png"; sourceTree = "<group>"; };
+		5965471416859BC200DB767B /* wall3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall3.png; path = Resources/Walls/wall3.png; sourceTree = "<group>"; };
+		5965471516859BC200DB767B /* wall3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall3@2x.png"; path = "Resources/Walls/wall3@2x.png"; sourceTree = "<group>"; };
+		5965471616859BC200DB767B /* wall4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall4.png; path = Resources/Walls/wall4.png; sourceTree = "<group>"; };
+		5965471716859BC200DB767B /* wall4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall4@2x.png"; path = "Resources/Walls/wall4@2x.png"; sourceTree = "<group>"; };
+		5965471816859BC200DB767B /* wall5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall5.png; path = Resources/Walls/wall5.png; sourceTree = "<group>"; };
+		5965471916859BC200DB767B /* wall5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall5@2x.png"; path = "Resources/Walls/wall5@2x.png"; sourceTree = "<group>"; };
+		5965471A16859BC200DB767B /* wall6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall6.png; path = Resources/Walls/wall6.png; sourceTree = "<group>"; };
+		5965471B16859BC200DB767B /* wall6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall6@2x.png"; path = "Resources/Walls/wall6@2x.png"; sourceTree = "<group>"; };
+		5965471C16859BC200DB767B /* wall7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall7.png; path = Resources/Walls/wall7.png; sourceTree = "<group>"; };
+		5965471D16859BC200DB767B /* wall7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall7@2x.png"; path = "Resources/Walls/wall7@2x.png"; sourceTree = "<group>"; };
+		5965471E16859BC200DB767B /* wall8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall8.png; path = Resources/Walls/wall8.png; sourceTree = "<group>"; };
+		5965471F16859BC200DB767B /* wall8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall8@2x.png"; path = "Resources/Walls/wall8@2x.png"; sourceTree = "<group>"; };
+		5965472016859BC200DB767B /* wall9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall9.png; path = Resources/Walls/wall9.png; sourceTree = "<group>"; };
+		5965472116859BC200DB767B /* wall9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall9@2x.png"; path = "Resources/Walls/wall9@2x.png"; sourceTree = "<group>"; };
+		5965473516859C0E00DB767B /* Template.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Template.xib; path = Levels/Template.xib; sourceTree = "<group>"; };
+		5965473716859E1E00DB767B /* wall10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall10.png; path = Resources/Walls/wall10.png; sourceTree = "<group>"; };
+		5965473816859E1E00DB767B /* wall10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall10@2x.png"; path = "Resources/Walls/wall10@2x.png"; sourceTree = "<group>"; };
+		5965473B16859E5C00DB767B /* Level1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Level1.xib; path = Levels/Level1.xib; sourceTree = "<group>"; };
+		5965473D1686597D00DB767B /* Tiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tiles.xib; path = Levels/Tiles.xib; sourceTree = "<group>"; };
+		5965473F16865AAA00DB767B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = ../Entities/Level.h; sourceTree = "<group>"; };
+		5965474016865AAA00DB767B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = ../Entities/Level.m; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +157,7 @@
 		593B236D1660933E004FE031 /* Food Trap */ = {
 			isa = PBXGroup;
 			children = (
+				5965470E16859BAB00DB767B /* Resources */,
 				593B236E1660933E004FE031 /* Classes */,
 				593B237E1660933E004FE031 /* FTViewController.xib */,
 				593B23801660933E004FE031 /* InfoPlist.strings */,
@@ -126,6 +176,7 @@
 		593B236E1660933E004FE031 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5965473416859BE900DB767B /* Levels */,
 				59F0D3AF167EDDFF00144155 /* Screens */,
 				59AE33C21673E4C6007BE47E /* Entities */,
 				593B236F1660933E004FE031 /* DevTestFlags.h */,
@@ -149,6 +200,51 @@
 				590427B416754F950043E07D /* macros.h */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		5965470E16859BAB00DB767B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5965470F16859BB500DB767B /* Walls */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5965470F16859BB500DB767B /* Walls */ = {
+			isa = PBXGroup;
+			children = (
+				5965471016859BC200DB767B /* wall1.png */,
+				5965471116859BC200DB767B /* wall1@2x.png */,
+				5965471216859BC200DB767B /* wall2.png */,
+				5965471316859BC200DB767B /* wall2@2x.png */,
+				5965471416859BC200DB767B /* wall3.png */,
+				5965471516859BC200DB767B /* wall3@2x.png */,
+				5965471616859BC200DB767B /* wall4.png */,
+				5965471716859BC200DB767B /* wall4@2x.png */,
+				5965471816859BC200DB767B /* wall5.png */,
+				5965471916859BC200DB767B /* wall5@2x.png */,
+				5965471A16859BC200DB767B /* wall6.png */,
+				5965471B16859BC200DB767B /* wall6@2x.png */,
+				5965471C16859BC200DB767B /* wall7.png */,
+				5965471D16859BC200DB767B /* wall7@2x.png */,
+				5965471E16859BC200DB767B /* wall8.png */,
+				5965471F16859BC200DB767B /* wall8@2x.png */,
+				5965472016859BC200DB767B /* wall9.png */,
+				5965472116859BC200DB767B /* wall9@2x.png */,
+				5965473716859E1E00DB767B /* wall10.png */,
+				5965473816859E1E00DB767B /* wall10@2x.png */,
+			);
+			name = Walls;
+			sourceTree = "<group>";
+		};
+		5965473416859BE900DB767B /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				5965473516859C0E00DB767B /* Template.xib */,
+				5965473B16859E5C00DB767B /* Level1.xib */,
+				5965473D1686597D00DB767B /* Tiles.xib */,
+			);
+			name = Levels;
 			sourceTree = "<group>";
 		};
 		59AE33C21673E4C6007BE47E /* Entities */ = {
@@ -204,6 +300,8 @@
 				59F0D3B5167EDDFF00144155 /* TitleScreen.h */,
 				59F0D3B6167EDDFF00144155 /* TitleScreen.m */,
 				59F0D3B7167EDDFF00144155 /* TitleScreen.xib */,
+				5965473F16865AAA00DB767B /* Level.h */,
+				5965474016865AAA00DB767B /* Level.m */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -269,6 +367,29 @@
 				593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */,
 				59F0D3BA167EDDFF00144155 /* SplashScreen.xib in Resources */,
 				59F0D3BC167EDDFF00144155 /* TitleScreen.xib in Resources */,
+				5965472216859BC200DB767B /* wall1.png in Resources */,
+				5965472316859BC200DB767B /* wall1@2x.png in Resources */,
+				5965472416859BC200DB767B /* wall2.png in Resources */,
+				5965472516859BC200DB767B /* wall2@2x.png in Resources */,
+				5965472616859BC200DB767B /* wall3.png in Resources */,
+				5965472716859BC200DB767B /* wall3@2x.png in Resources */,
+				5965472816859BC200DB767B /* wall4.png in Resources */,
+				5965472916859BC200DB767B /* wall4@2x.png in Resources */,
+				5965472A16859BC200DB767B /* wall5.png in Resources */,
+				5965472B16859BC200DB767B /* wall5@2x.png in Resources */,
+				5965472C16859BC200DB767B /* wall6.png in Resources */,
+				5965472D16859BC200DB767B /* wall6@2x.png in Resources */,
+				5965472E16859BC200DB767B /* wall7.png in Resources */,
+				5965472F16859BC200DB767B /* wall7@2x.png in Resources */,
+				5965473016859BC200DB767B /* wall8.png in Resources */,
+				5965473116859BC200DB767B /* wall8@2x.png in Resources */,
+				5965473216859BC200DB767B /* wall9.png in Resources */,
+				5965473316859BC200DB767B /* wall9@2x.png in Resources */,
+				5965473616859C0E00DB767B /* Template.xib in Resources */,
+				5965473916859E1E00DB767B /* wall10.png in Resources */,
+				5965473A16859E1E00DB767B /* wall10@2x.png in Resources */,
+				5965473C16859E5C00DB767B /* Level1.xib in Resources */,
+				5965473E1686597D00DB767B /* Tiles.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +416,7 @@
 				59F0D3BB167EDDFF00144155 /* TitleScreen.m in Sources */,
 				59654709168592A000DB767B /* Tile.m in Sources */,
 				5965470D168592C200DB767B /* Path.m in Sources */,
+				5965474116865AAA00DB767B /* Level.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

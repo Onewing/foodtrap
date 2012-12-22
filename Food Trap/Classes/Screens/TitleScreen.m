@@ -8,6 +8,8 @@
 
 #import "TitleScreen.h"
 #import "SplashScreen.h"
+#import "Level.h"
+
 @implementation TitleScreen
 
 
@@ -17,7 +19,7 @@
 
 -(IBAction)showTitle {
     NSLog(@"Touch");
-    SplashScreen *vc = [[SplashScreen alloc] init];
+    Level *vc = [[Level alloc] initWithNibName:@"Level1" bundle:[NSBundle mainBundle]];
     [[Game sharedGame] show:vc];
 }
 

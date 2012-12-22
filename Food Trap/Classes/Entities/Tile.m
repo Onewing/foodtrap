@@ -10,4 +10,17 @@
 
 @implementation Tile
 
+-(void)setup:(int)tag {
+    UIImageView *imgview = (UIImageView *)self;
+    switch(tag) {
+        case 1:
+            imgview.image = [UIImage imageNamed:@"wall1.png"];
+
+            break;
+        default:
+            imgview.image = [UIImage imageNamed:@"wall10.png"];
+            break;
+    }
+}
+
 @end
