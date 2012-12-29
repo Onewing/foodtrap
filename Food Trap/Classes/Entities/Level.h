@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 
-@property (nonatomic, strong) NSArray *tiles;
+@property (nonatomic, strong) NSMutableArray *tiles;
 
 @end

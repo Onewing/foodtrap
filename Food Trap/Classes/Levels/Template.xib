@@ -472,6 +472,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 96}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="7857567"/>
+						<reference key="NSNextKeyView" ref="555472776"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -911,6 +912,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 224}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="7857567"/>
+						<reference key="NSNextKeyView" ref="128137346"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1350,6 +1352,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 352}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="7857567"/>
+						<reference key="NSNextKeyView" ref="300207918"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1569,6 +1572,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 416}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="7857567"/>
+						<reference key="NSNextKeyView" ref="819012190"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1678,6 +1682,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 448}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="7857567"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

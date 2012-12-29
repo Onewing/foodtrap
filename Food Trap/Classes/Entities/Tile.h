@@ -20,11 +20,18 @@
 #define TAG_WALL_SOUTHWEST          8
 #define TAG_GROUND                  9
 #define TAG_WALL                    10
+#define TAG_WALL_SOUTHEND           11
+#define TAG_WALL_NORTHEND           12
+#define TAG_WALL_EASTEND            13
+#define TAG_WALL_WESTEND            14
+#define TAG_WALL_HORIZHALL          15
+#define TAG_WALL_VERTIHALL          16
 
 @interface Tile : Entity
 
 @property (nonatomic, strong) Path *north, *south, *west, *east;
-
+@property (nonatomic, assign) BOOL processed;
+@property (nonatomic, strong) UIView *img;
 
 
 

@@ -10,6 +10,15 @@
 @class Tile;
 @interface Path : NSObject
 
-@property (nonatomic, strong) Tile *to, *from;
+@property (nonatomic, strong) Tile *tile;
+
+-(id)initWithTile:(Tile *)tile;
+
+
+
++(BOOL)openNorth:(int)tag;
++(BOOL)openSouth:(int)tag;
++(BOOL)openEast:(int)tag;
++(BOOL)openWest:(int)tag;
 
 @end
