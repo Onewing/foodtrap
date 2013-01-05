@@ -9,6 +9,7 @@
 #import "Level.h"
 #import "Tile.h"
 #import "Path.h"
+#import "Animal.h"
 
 @implementation Level
 
@@ -68,6 +69,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.tiles = [NSMutableArray array];
+    self.animals = [NSMutableArray array];
     for(Tile *tile in [self.viewTileLayer subviews]) {
         [self processTile:tile];
     }
@@ -75,6 +77,11 @@
         [tile.img setHidden:NO];
     }
     
+    for(Animal *animal in [self.viewAnimalLayer subviews]) {
+        [self.animals addObject:animal];
+    }
+    NSLog(@"Tiles: %@", self.tiles);
+    NSLog(@"Animals:  %@", self.animals);
 }
 
 @end

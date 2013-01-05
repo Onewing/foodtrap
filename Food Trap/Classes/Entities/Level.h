@@ -13,6 +13,7 @@
 @interface Level : Screen
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
+@property (nonatomic, strong) IBOutlet UIView *viewAnimalLayer;
 
 @property (nonatomic, strong) NSMutableArray *tiles;
 @property (nonatomic, strong) NSMutableArray *animals;

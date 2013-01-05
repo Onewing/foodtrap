@@ -37,6 +37,8 @@
 		5943F498168F905F00773909 /* wall15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48C168F905F00773909 /* wall15@2x.png */; };
 		5943F499168F905F00773909 /* wall16.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48D168F905F00773909 /* wall16.png */; };
 		5943F49A168F905F00773909 /* wall16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48E168F905F00773909 /* wall16@2x.png */; };
+		595A609916980740007E9849 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609816980740007E9849 /* Animal.m */; };
+		595A609D16980754007E9849 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609C16980754007E9849 /* Mouse.m */; };
 		59654709168592A000DB767B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59654708168592A000DB767B /* Tile.m */; };
 		5965470D168592C200DB767B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965470C168592C200DB767B /* Path.m */; };
 		5965472216859BC200DB767B /* wall1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965471016859BC200DB767B /* wall1.png */; };
@@ -121,6 +123,10 @@
 		5943F48C168F905F00773909 /* wall15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall15@2x.png"; path = "Resources/Walls/wall15@2x.png"; sourceTree = "<group>"; };
 		5943F48D168F905F00773909 /* wall16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall16.png; path = Resources/Walls/wall16.png; sourceTree = "<group>"; };
 		5943F48E168F905F00773909 /* wall16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall16@2x.png"; path = "Resources/Walls/wall16@2x.png"; sourceTree = "<group>"; };
+		595A609716980740007E9849 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Entities/Animal.h; sourceTree = "<group>"; };
+		595A609816980740007E9849 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = Entities/Animal.m; sourceTree = "<group>"; };
+		595A609B16980754007E9849 /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mouse.h; path = Entities/Mouse.h; sourceTree = "<group>"; };
+		595A609C16980754007E9849 /* Mouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mouse.m; path = Entities/Mouse.m; sourceTree = "<group>"; };
 		59654707168592A000DB767B /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = Entities/Tile.h; sourceTree = "<group>"; };
 		59654708168592A000DB767B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Entities/Tile.m; sourceTree = "<group>"; };
 		5965470B168592C200DB767B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Path.h; path = Entities/Path.h; sourceTree = "<group>"; };
@@ -313,6 +319,10 @@
 				59654708168592A000DB767B /* Tile.m */,
 				5965470B168592C200DB767B /* Path.h */,
 				5965470C168592C200DB767B /* Path.m */,
+				595A609716980740007E9849 /* Animal.h */,
+				595A609816980740007E9849 /* Animal.m */,
+				595A609B16980754007E9849 /* Mouse.h */,
+				595A609C16980754007E9849 /* Mouse.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -490,6 +500,8 @@
 				59654709168592A000DB767B /* Tile.m in Sources */,
 				5965470D168592C200DB767B /* Path.m in Sources */,
 				5965474116865AAA00DB767B /* Level.m in Sources */,
+				595A609916980740007E9849 /* Animal.m in Sources */,
+				595A609D16980754007E9849 /* Mouse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
