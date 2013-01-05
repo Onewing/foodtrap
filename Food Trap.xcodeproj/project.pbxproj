@@ -63,6 +63,10 @@
 		5965473C16859E5C00DB767B /* Level1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473B16859E5C00DB767B /* Level1.xib */; };
 		5965473E1686597D00DB767B /* Tiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473D1686597D00DB767B /* Tiles.xib */; };
 		5965474116865AAA00DB767B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965474016865AAA00DB767B /* Level.m */; };
+		597CF92C169656340060F4F9 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF928169656340060F4F9 /* mouse.png */; };
+		597CF92D169656340060F4F9 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF929169656340060F4F9 /* mouse@2x.png */; };
+		597CF92E169656340060F4F9 /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92A169656340060F4F9 /* snake.png */; };
+		597CF92F169656340060F4F9 /* snake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92B169656340060F4F9 /* snake@2x.png */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
@@ -146,6 +150,10 @@
 		5965473D1686597D00DB767B /* Tiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tiles.xib; path = Levels/Tiles.xib; sourceTree = "<group>"; };
 		5965473F16865AAA00DB767B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = ../Entities/Level.h; sourceTree = "<group>"; };
 		5965474016865AAA00DB767B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = ../Entities/Level.m; sourceTree = "<group>"; };
+		597CF928169656340060F4F9 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
+		597CF929169656340060F4F9 /* mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouse@2x.png"; sourceTree = "<group>"; };
+		597CF92A169656340060F4F9 /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
+		597CF92B169656340060F4F9 /* snake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake@2x.png"; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +237,7 @@
 		5965470E16859BAB00DB767B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				597CF927169656340060F4F9 /* Animals */,
 				5965470F16859BB500DB767B /* Walls */,
 			);
 			name = Resources;
@@ -281,6 +290,18 @@
 				5965473D1686597D00DB767B /* Tiles.xib */,
 			);
 			name = Levels;
+			sourceTree = "<group>";
+		};
+		597CF927169656340060F4F9 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				597CF928169656340060F4F9 /* mouse.png */,
+				597CF929169656340060F4F9 /* mouse@2x.png */,
+				597CF92A169656340060F4F9 /* snake.png */,
+				597CF92B169656340060F4F9 /* snake@2x.png */,
+			);
+			name = Animals;
+			path = Resources/Animals;
 			sourceTree = "<group>";
 		};
 		59AE33C21673E4C6007BE47E /* Entities */ = {
@@ -438,6 +459,10 @@
 				5943F498168F905F00773909 /* wall15@2x.png in Resources */,
 				5943F499168F905F00773909 /* wall16.png in Resources */,
 				5943F49A168F905F00773909 /* wall16@2x.png in Resources */,
+				597CF92C169656340060F4F9 /* mouse.png in Resources */,
+				597CF92D169656340060F4F9 /* mouse@2x.png in Resources */,
+				597CF92E169656340060F4F9 /* snake.png in Resources */,
+				597CF92F169656340060F4F9 /* snake@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
