@@ -28,7 +28,7 @@
     /// North Tiles
     if(!tile.north && [Path openNorth:tile.tag]) {
         Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-30) withEvent:nil];
-        if(north && north.tag != TAG_WALL) {
+        if([north class] == [Tile class] && north && north.tag != TAG_WALL) {
             tile.north = [[Path alloc] initWithTile:north];
             north.south = [[Path alloc] initWithTile:tile];
         }
@@ -38,7 +38,7 @@
     /// South Tiles
     if(!tile.south && [Path openSouth:tile.tag]) {
         Tile *south = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y+33) withEvent:nil];
-        if(south && south.tag != TAG_WALL) {
+        if([south class] == [Tile class] && south && south.tag != TAG_WALL) {
             tile.south = [[Path alloc] initWithTile:south];
             south.north = [[Path alloc] initWithTile:tile];
         }
@@ -47,7 +47,7 @@
     /// West Tiles
     if(!tile.west && [Path openWest:tile.tag]) {
         Tile *west = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x - 30, tile.frame.origin.y) withEvent:nil];
-        if(west && west.tag != TAG_WALL) {
+        if([west class] == [Tile class] && west && west.tag != TAG_WALL) {
             tile.west = [[Path alloc] initWithTile:west];
             west.east = [[Path alloc] initWithTile:tile];
         }
@@ -56,7 +56,7 @@
     /// East Tiles
     if(!tile.east && [Path openEast:tile.tag]){
         Tile *east = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x + 33, tile.frame.origin.y) withEvent:nil];
-        if(east && east.tag != TAG_WALL) {
+        if([east class] == [Tile class] && east && east.tag != TAG_WALL) {
             tile.east = [[Path alloc] initWithTile:east];
             east.west = [[Path alloc] initWithTile:tile];
         }
