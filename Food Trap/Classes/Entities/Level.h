@@ -15,5 +15,6 @@
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 
 @property (nonatomic, strong) NSMutableArray *tiles;
+@property (nonatomic, strong) NSMutableArray *animals;
 
 @end

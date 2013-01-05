@@ -24,7 +24,6 @@
     if(tile == nil || tile.hidden || tile.tag == 0 || tile.tag == TAG_WALL) {
         return nil;
     }
-    tile.hidden = YES;
     /// North Tiles
     if(!tile.north && [Path openNorth:tile.tag]) {
         Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-30) withEvent:nil];
@@ -61,7 +60,6 @@
             east.west = [[Path alloc] initWithTile:tile];
         }
     }
-    tile.hidden = NO;
     [self.tiles addObject:tile];
     return tile;
 }
