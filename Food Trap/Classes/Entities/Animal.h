@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+#import "Tile.h"
 
 @interface Animal : Entity
+@property (nonatomic, strong) Tile *location;
 
 @end

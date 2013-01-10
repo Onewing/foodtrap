@@ -65,6 +65,17 @@
     return tile;
 }
 
+-(void)processAnimal:(Animal *)animal {
+    Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
+    if ([location class] == [Tile class]) {
+        animal.location = location;
+    }
+    else {
+        NSLog(@"Could not find animal's location!");
+    }
+    [self.animals addObject:animal];
+}
+
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -78,7 +89,7 @@
     }
     
     for(Animal *animal in [self.viewAnimalLayer subviews]) {
-        [self.animals addObject:animal];
+        [self processAnimal:animal];
     }
     NSLog(@"Tiles: %@", self.tiles);
     NSLog(@"Animals:  %@", self.animals);
