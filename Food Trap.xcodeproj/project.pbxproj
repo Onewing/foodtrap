@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5906AE7F16A0DD8200AB7C8D /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5906AE7D16A0DD8200AB7C8D /* selected.png */; };
+		5906AE8016A0DD8200AB7C8D /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5906AE7E16A0DD8200AB7C8D /* selected@2x.png */; };
 		593B238A1660933E004FE031 /* FTArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23711660933E004FE031 /* FTArea.m */; };
 		593B238B1660933E004FE031 /* FTEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23731660933E004FE031 /* FTEnemy.m */; };
 		593B238C1660933E004FE031 /* FTEnemy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23741660933E004FE031 /* FTEnemy.xib */; };
@@ -82,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		590427B416754F950043E07D /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		5906AE7D16A0DD8200AB7C8D /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
+		5906AE7E16A0DD8200AB7C8D /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
 		593B236F1660933E004FE031 /* DevTestFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevTestFlags.h; sourceTree = "<group>"; };
 		593B23701660933E004FE031 /* FTArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTArea.h; sourceTree = "<group>"; };
 		593B23711660933E004FE031 /* FTArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTArea.m; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				597CF929169656340060F4F9 /* mouse@2x.png */,
 				597CF92A169656340060F4F9 /* snake.png */,
 				597CF92B169656340060F4F9 /* snake@2x.png */,
+				5906AE7D16A0DD8200AB7C8D /* selected.png */,
+				5906AE7E16A0DD8200AB7C8D /* selected@2x.png */,
 			);
 			name = Animals;
 			path = Resources/Animals;
@@ -473,6 +479,8 @@
 				597CF92D169656340060F4F9 /* mouse@2x.png in Resources */,
 				597CF92E169656340060F4F9 /* snake.png in Resources */,
 				597CF92F169656340060F4F9 /* snake@2x.png in Resources */,
+				5906AE7F16A0DD8200AB7C8D /* selected.png in Resources */,
+				5906AE8016A0DD8200AB7C8D /* selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
