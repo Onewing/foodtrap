@@ -73,7 +73,33 @@
     else {
         NSLog(@"Could not find animal's location!");
     }
+    animal.img = [[animal subviews] objectAtIndex:0];
     [self.animals addObject:animal];
+}
+
+-(void)entityTouched:(NSNotification *)notification {
+//    NSLog(@"Entity Touched:  %@", [notification userInfo]);
+    Entity *e = [[notification userInfo] objectForKey:@"entity"];
+    if ([e isKindOfClass:[Animal class]]) {
+        NSLog(@"touched an animal!");
+    }
+    if([e isKindOfClass:[Tile class]]) {
+        NSLog(@"touched a tile!");
+    }
+}
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    UITouch *t = [[event allTouches] anyObject];
+    if(self.viewAnimalLayer == t.view) {
+        /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
+        CGPoint loc = [t locationInView:t.view];
+        UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
+        if ([touch isKindOfClass:[Entity class]]) {
+            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
+        }
+    }
 }
 
 
@@ -93,6 +119,20 @@
     }
     NSLog(@"Tiles: %@", self.tiles);
     NSLog(@"Animals:  %@", self.animals);
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entityTouched:) name:@"EntityTouched" object:nil];
 }
 
+-(void)destroy {
+    [[NSNotificationCenter defaultCenter] removeObserver:@"EntityTouched"];
+}
+
+-(void)viewDidUnload {
+    [super viewDidUnload];
+    [self destroy];
+}
+
+-(void)dealloc {
+    [self destroy];
+}
 @end

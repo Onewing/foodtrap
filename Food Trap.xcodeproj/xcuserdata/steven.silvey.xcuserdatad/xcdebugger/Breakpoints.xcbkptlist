@@ -117,7 +117,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "74"
          endingLineNumber = "74"
-         landmarkName = "-processAnimals:"
+         landmarkName = "-processAnimal:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

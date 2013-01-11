@@ -82,4 +82,12 @@
 //	[self performSelector:@selector(setLocation:) withObject:tile afterDelay:0.3f];
 }
 
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:self forKey:@"entity"]];
+}
+
+
 @end
