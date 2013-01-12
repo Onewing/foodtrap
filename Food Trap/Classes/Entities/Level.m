@@ -82,6 +82,8 @@
     Entity *e = [[notification userInfo] objectForKey:@"entity"];
     if ([e isKindOfClass:[Animal class]]) {
         NSLog(@"touched an animal!");
+        if(self.animalSelected != nil)
+            [self.animalSelected.selected removeFromSuperview];
         self.animalSelected = (Animal *)e;
         UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
         [self.animalSelected addSubview:imgSelected];
