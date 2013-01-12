@@ -40,4 +40,20 @@
     return self;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Methods
+-(BOOL)isAdjacent:(Tile *)tile {
+    if (self.north.tile == tile || self.south.tile == tile || self.west.tile == tile || self.east.tile == tile) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(CGPoint)locationPoint {
+    return CGPointMake(self.frame.origin.x, self.frame.origin.y);
+}
+
+
 @end

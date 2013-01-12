@@ -11,7 +11,7 @@
 #import "Screen.h"
 #import "Animal.h"
 
-@interface Level : Screen
+@interface Level : Screen <EntityDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 @property (nonatomic, strong) IBOutlet UIView *viewAnimalLayer;

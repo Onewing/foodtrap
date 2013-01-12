@@ -33,6 +33,7 @@
 @property (nonatomic, assign) BOOL processed;
 @property (nonatomic, strong) UIView *img;
 
-
+-(BOOL)isAdjacent:(Tile *)tile;
+-(CGPoint)locationPoint;
 
 @end

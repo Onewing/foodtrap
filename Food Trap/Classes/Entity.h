@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "FTTile.h"
 
+@class Entity;
+@protocol EntityDelegate <NSObject>
+
+-(void)movedToLocation:(Entity *)entity;
+
+@end
+
+
 @interface Entity : UIView
 
 @property (nonatomic, assign) CGPoint destination;
 @property (nonatomic, assign) CGFloat ax, ay;
 @property (nonatomic, assign) CGFloat distToDest;
+@property (nonatomic, assign) BOOL moving;
+@property (nonatomic, assign) id<EntityDelegate> delegate;
 
 -(void)setLocation:(CGPoint)pt;
 -(void)moveTo:(FTTile *)tile;

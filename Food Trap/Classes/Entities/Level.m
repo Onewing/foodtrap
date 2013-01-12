@@ -16,6 +16,9 @@
 
 -(void)update:(CADisplayLink *)displayLink {
     [super update:displayLink];
+    for(Animal *animal in self.animals) {
+        [animal update:displayLink];
+    }
 }
 
 
@@ -65,15 +68,20 @@
     return tile;
 }
 
--(void)processAnimal:(Animal *)animal {
+-(void)setAnimalTile:(Animal *)animal {
     Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
     if ([location class] == [Tile class]) {
-        animal.location = location;
+        animal.tileLocation = location;
     }
     else {
         NSLog(@"Could not find animal's location!");
     }
+}
+
+-(void)processAnimal:(Animal *)animal {
+    [self setAnimalTile:animal];
     animal.img = [[animal subviews] objectAtIndex:0];
+    animal.delegate = self;
     [self.animals addObject:animal];
 }
 
@@ -91,8 +99,22 @@
     }
     if([e isKindOfClass:[Tile class]]) {
         NSLog(@"touched a tile!");
-        [self.animalSelected.selected removeFromSuperview];
-        self.animalSelected = nil;
+        if(self.animalSelected != nil) {
+            /// Move animal if tapped a tile adjacent to selected animal.
+            Tile *tileSelected = (Tile *) e;
+            
+            if ([tileSelected isAdjacent:self.animalSelected.tileLocation]) {
+                NSLog(@"Is adjacent!");
+                [self.animalSelected moveToLocation:[tileSelected locationPoint] speed:128.0f];
+            }
+            else {
+                [self.animalSelected.selected removeFromSuperview];
+                self.animalSelected = nil;
+            }
+        }
+        
+        
+        
     }
 }
 
@@ -109,6 +131,21 @@
         }
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark EntityDelegate Methods
+-(void)movedToLocation:(Entity *)entity {
+    if (entity == self.animalSelected) {
+        [self setAnimalTile:self.animalSelected];
+    }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark View Life Cycle
 
 
 -(void)viewDidLoad {

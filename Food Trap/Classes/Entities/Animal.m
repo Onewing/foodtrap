@@ -11,7 +11,7 @@
 @implementation Animal
 
 -(NSString *)description {
-    return [[NSString alloc] initWithFormat:@"\%@ at Tile: %@", [self class], self.location];
+    return [[NSString alloc] initWithFormat:@"\%@ at Tile: %@", [self class], self.tileLocation];
     
 }
 
