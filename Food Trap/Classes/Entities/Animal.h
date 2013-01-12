@@ -13,5 +13,6 @@
 @interface Animal : Entity
 @property (nonatomic, strong) Tile *location;
 @property (nonatomic, strong) UIImageView *img;
+@property (nonatomic, strong) UIImageView *selected;
 
 @end

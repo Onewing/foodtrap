@@ -82,9 +82,15 @@
     Entity *e = [[notification userInfo] objectForKey:@"entity"];
     if ([e isKindOfClass:[Animal class]]) {
         NSLog(@"touched an animal!");
+        self.animalSelected = (Animal *)e;
+        UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
+        [self.animalSelected addSubview:imgSelected];
+        self.animalSelected.selected = imgSelected;
     }
     if([e isKindOfClass:[Tile class]]) {
         NSLog(@"touched a tile!");
+        [self.animalSelected.selected removeFromSuperview];
+        self.animalSelected = nil;
     }
 }
 

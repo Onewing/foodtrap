@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Entity.h"
 #import "Screen.h"
+#import "Animal.h"
 
 @interface Level : Screen
 
@@ -17,5 +18,7 @@
 
 @property (nonatomic, strong) NSMutableArray *tiles;
 @property (nonatomic, strong) NSMutableArray *animals;
+
+@property (nonatomic, strong) Animal *animalSelected;
 
 @end
