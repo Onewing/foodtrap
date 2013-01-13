@@ -87,6 +87,10 @@
 
 -(void)entityTouched:(NSNotification *)notification {
 //    NSLog(@"Entity Touched:  %@", [notification userInfo]);
+    if(self.animalSelected.moving) {
+        return;
+    }
+    
     Entity *e = [[notification userInfo] objectForKey:@"entity"];
     if ([e isKindOfClass:[Animal class]]) {
         NSLog(@"touched an animal!");
