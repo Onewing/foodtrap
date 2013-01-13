@@ -71,6 +71,7 @@
 		597CF92D169656340060F4F9 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF929169656340060F4F9 /* mouse@2x.png */; };
 		597CF92E169656340060F4F9 /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92A169656340060F4F9 /* snake.png */; };
 		597CF92F169656340060F4F9 /* snake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92B169656340060F4F9 /* snake@2x.png */; };
+		59A608AA16A271DE003BF4C7 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A608A916A271DE003BF4C7 /* Snake.m */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
 		59C9656C15183516005B1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656B15183516005B1120 /* Foundation.framework */; };
@@ -164,6 +165,8 @@
 		597CF929169656340060F4F9 /* mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouse@2x.png"; sourceTree = "<group>"; };
 		597CF92A169656340060F4F9 /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
 		597CF92B169656340060F4F9 /* snake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake@2x.png"; sourceTree = "<group>"; };
+		59A608A816A271DE003BF4C7 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = Entities/Snake.h; sourceTree = "<group>"; };
+		59A608A916A271DE003BF4C7 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Snake.m; path = Entities/Snake.m; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		59AE33B61673E02F007BE47E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		59C9656515183516005B1120 /* Food Trap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Trap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +332,8 @@
 				595A609816980740007E9849 /* Animal.m */,
 				595A609B16980754007E9849 /* Mouse.h */,
 				595A609C16980754007E9849 /* Mouse.m */,
+				59A608A816A271DE003BF4C7 /* Snake.h */,
+				59A608A916A271DE003BF4C7 /* Snake.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				5965474116865AAA00DB767B /* Level.m in Sources */,
 				595A609916980740007E9849 /* Animal.m in Sources */,
 				595A609D16980754007E9849 /* Mouse.m in Sources */,
+				59A608AA16A271DE003BF4C7 /* Snake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
