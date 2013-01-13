@@ -16,8 +16,13 @@
 
 -(void)update:(CADisplayLink *)displayLink {
     [super update:displayLink];
+    if(!self.animalSelected.alive) {
+        self.animalSelected = nil;
+    }
     for(Animal *animal in self.animals) {
-        [animal update:displayLink];
+        if(animal.alive) {
+            [animal update:displayLink];
+        }
     }
 }
 
@@ -71,6 +76,9 @@
 -(void)setAnimalTile:(Animal *)animal {
     Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
     if ([location class] == [Tile class]) {
+        animal.tileLocation.animal = nil;
+        
+        location.animal = animal;
         animal.tileLocation = location;
     }
     else {
@@ -85,6 +93,17 @@
     [self.animals addObject:animal];
 }
 
+-(void)animalTouched:(Animal *)touchedAnimal {
+    if (touchedAnimal.alive) {
+        if(self.animalSelected != nil)
+            [self.animalSelected.selected removeFromSuperview];
+        self.animalSelected = touchedAnimal;
+        UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
+        [self.animalSelected addSubview:imgSelected];
+        self.animalSelected.selected = imgSelected;
+    }
+}
+
 -(void)entityTouched:(NSNotification *)notification {
 //    NSLog(@"Entity Touched:  %@", [notification userInfo]);
     if(self.animalSelected.moving) {
@@ -94,12 +113,8 @@
     Entity *e = [[notification userInfo] objectForKey:@"entity"];
     if ([e isKindOfClass:[Animal class]]) {
         NSLog(@"touched an animal!");
-        if(self.animalSelected != nil)
-            [self.animalSelected.selected removeFromSuperview];
-        self.animalSelected = (Animal *)e;
-        UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
-        [self.animalSelected addSubview:imgSelected];
-        self.animalSelected.selected = imgSelected;
+        [self animalTouched:(Animal *)e];
+        
     }
     if([e isKindOfClass:[Tile class]]) {
         NSLog(@"touched a tile!");
@@ -136,14 +151,29 @@
     }
 }
 
+-(void)animalLogic {
+    for(Animal *animal in self.animals) {
+        if(animal.alive) {
+            [animal eat];
+        }
+    }
+    
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark EntityDelegate Methods
 -(void)movedToLocation:(Entity *)entity {
-    if (entity == self.animalSelected) {
-        [self setAnimalTile:self.animalSelected];
+    if([entity isKindOfClass:[Animal class]]) {
+        
+        [self setAnimalTile:(Animal *)entity];
+    
+        /// Run all the game rules to see if anything should happen now that the board has changed
+        [self animalLogic];
     }
 }
+
+
 
 
 

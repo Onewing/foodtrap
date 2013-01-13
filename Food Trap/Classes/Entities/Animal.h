@@ -14,5 +14,12 @@
 @property (nonatomic, strong) Tile *tileLocation;
 @property (nonatomic, strong) UIImageView *img;
 @property (nonatomic, strong) UIImageView *selected;
+@property (nonatomic, assign) BOOL alive;
 
+@property (nonatomic, strong) NSArray *prey;
+
+-(void)addPrey:(Class)c;
+-(void)eat;
+
+-(void)setup;
 @end

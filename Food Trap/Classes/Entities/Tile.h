@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Entity.h"
 #import "Path.h"
+@class Animal;
 
 #define TAG_WALL_WEST               1
 #define TAG_WALL_NORTH              2
@@ -32,6 +33,7 @@
 @property (nonatomic, strong) Path *north, *south, *west, *east;
 @property (nonatomic, assign) BOOL processed;
 @property (nonatomic, strong) UIView *img;
+@property (nonatomic, strong) Animal *animal;
 
 -(BOOL)isAdjacent:(Tile *)tile;
 -(CGPoint)locationPoint;
