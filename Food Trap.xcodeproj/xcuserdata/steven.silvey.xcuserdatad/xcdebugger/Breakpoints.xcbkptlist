@@ -112,12 +112,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "379748807.32957"
+         timestampString = "380526099.739238"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
          landmarkName = "-setAnimalTile:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Food Trap/Classes/Entities/Level.m"
+         timestampString = "380526099.739238"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "-processTile:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -10,6 +10,8 @@
 #import "Tile.h"
 #import "Path.h"
 #import "Animal.h"
+#import "Mouse.h"
+#import "Snake.h"
 
 @implementation Level
 
@@ -33,6 +35,26 @@
     if(tile == nil || tile.hidden || tile.tag == 0 || tile.tag == TAG_WALL) {
         return nil;
     }
+    UIImageView *imgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall9.png"]];
+    [tile addSubview:imgview];
+    [tile sendSubviewToBack:imgview];
+    
+    
+    for(UIView *view in [tile subviews]) {
+        if([view isKindOfClass:[Animal class]]) {
+            Animal *animalData = (Animal *)view;
+            
+            Animal *newAnimal = [self processAnimal:animalData at:tile];
+            
+            [tile.superview addSubview:newAnimal];
+            [animalData removeFromSuperview];
+            
+            tile.animal = newAnimal;
+            newAnimal.tileLocation = tile;
+        }
+    }
+    
+    
     /// North Tiles
     if(!tile.north && [Path openNorth:tile.tag]) {
         Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-30) withEvent:nil];
@@ -74,7 +96,9 @@
 }
 
 -(void)setAnimalTile:(Animal *)animal {
+    [animal setUserInteractionEnabled:NO];
     Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
+    [animal setUserInteractionEnabled:YES];
     if ([location class] == [Tile class]) {
         animal.tileLocation.animal = nil;
         
@@ -86,11 +110,26 @@
     }
 }
 
--(void)processAnimal:(Animal *)animal {
-    [self setAnimalTile:animal];
-    animal.img = [[animal subviews] objectAtIndex:0];
+-(Animal *)processAnimal:(Animal *)data at:(Tile *)tile{
+//    [self setAnimalTile:animal];
+//    animal.img = [[animal subviews] objectAtIndex:0];
+    Animal *animal;
+    if ([data class] == [Mouse class]) {
+        animal = [[Mouse alloc] initWithFrame:tile.frame];
+        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Mouse.png"]];
+        [animal addSubview:img];
+        animal.img = img;
+    }
+    if([data class] == [Snake class]) {
+        animal = [[Snake alloc] initWithFrame:tile.frame];
+        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Snake.png"]];
+        [animal addSubview:img];
+        animal.img = img;
+    }
     animal.delegate = self;
     [self.animals addObject:animal];
+    
+    return animal;
 }
 
 -(void)animalTouched:(Animal *)touchedAnimal {
@@ -193,9 +232,6 @@
         [tile.img setHidden:NO];
     }
     
-    for(Animal *animal in [self.viewAnimalLayer subviews]) {
-        [self processAnimal:animal];
-    }
     NSLog(@"Tiles: %@", self.tiles);
     NSLog(@"Animals:  %@", self.animals);
     
