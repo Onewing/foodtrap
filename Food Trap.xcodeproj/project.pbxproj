@@ -67,6 +67,14 @@
 		5965473C16859E5C00DB767B /* Level1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473B16859E5C00DB767B /* Level1.xib */; };
 		5965473E1686597D00DB767B /* Tiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473D1686597D00DB767B /* Tiles.xib */; };
 		5965474116865AAA00DB767B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965474016865AAA00DB767B /* Level.m */; };
+		596B03AE16C4BCC900C4F109 /* bottomleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03A616C4BCC900C4F109 /* bottomleft.png */; };
+		596B03AF16C4BCC900C4F109 /* bottomleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03A716C4BCC900C4F109 /* bottomleft@2x.png */; };
+		596B03B016C4BCC900C4F109 /* bottomright.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03A816C4BCC900C4F109 /* bottomright.png */; };
+		596B03B116C4BCC900C4F109 /* bottomright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03A916C4BCC900C4F109 /* bottomright@2x.png */; };
+		596B03B216C4BCC900C4F109 /* topleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03AA16C4BCC900C4F109 /* topleft.png */; };
+		596B03B316C4BCC900C4F109 /* topleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03AB16C4BCC900C4F109 /* topleft@2x.png */; };
+		596B03B416C4BCC900C4F109 /* topright.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03AC16C4BCC900C4F109 /* topright.png */; };
+		596B03B516C4BCC900C4F109 /* topright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03AD16C4BCC900C4F109 /* topright@2x.png */; };
 		597CF92C169656340060F4F9 /* mouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF928169656340060F4F9 /* mouse.png */; };
 		597CF92D169656340060F4F9 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF929169656340060F4F9 /* mouse@2x.png */; };
 		597CF92E169656340060F4F9 /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92A169656340060F4F9 /* snake.png */; };
@@ -163,6 +171,14 @@
 		5965473D1686597D00DB767B /* Tiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tiles.xib; path = Levels/Tiles.xib; sourceTree = "<group>"; };
 		5965473F16865AAA00DB767B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = ../Entities/Level.h; sourceTree = "<group>"; };
 		5965474016865AAA00DB767B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = ../Entities/Level.m; sourceTree = "<group>"; };
+		596B03A616C4BCC900C4F109 /* bottomleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomleft.png; path = Resources/Walls/bottomleft.png; sourceTree = "<group>"; };
+		596B03A716C4BCC900C4F109 /* bottomleft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottomleft@2x.png"; path = "Resources/Walls/bottomleft@2x.png"; sourceTree = "<group>"; };
+		596B03A816C4BCC900C4F109 /* bottomright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottomright.png; path = Resources/Walls/bottomright.png; sourceTree = "<group>"; };
+		596B03A916C4BCC900C4F109 /* bottomright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bottomright@2x.png"; path = "Resources/Walls/bottomright@2x.png"; sourceTree = "<group>"; };
+		596B03AA16C4BCC900C4F109 /* topleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topleft.png; path = Resources/Walls/topleft.png; sourceTree = "<group>"; };
+		596B03AB16C4BCC900C4F109 /* topleft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topleft@2x.png"; path = "Resources/Walls/topleft@2x.png"; sourceTree = "<group>"; };
+		596B03AC16C4BCC900C4F109 /* topright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topright.png; path = Resources/Walls/topright.png; sourceTree = "<group>"; };
+		596B03AD16C4BCC900C4F109 /* topright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topright@2x.png"; path = "Resources/Walls/topright@2x.png"; sourceTree = "<group>"; };
 		597CF928169656340060F4F9 /* mouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouse.png; sourceTree = "<group>"; };
 		597CF929169656340060F4F9 /* mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mouse@2x.png"; sourceTree = "<group>"; };
 		597CF92A169656340060F4F9 /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
@@ -297,6 +313,14 @@
 				5943F48C168F905F00773909 /* wall15@2x.png */,
 				5943F48D168F905F00773909 /* wall16.png */,
 				5943F48E168F905F00773909 /* wall16@2x.png */,
+				596B03A616C4BCC900C4F109 /* bottomleft.png */,
+				596B03A716C4BCC900C4F109 /* bottomleft@2x.png */,
+				596B03A816C4BCC900C4F109 /* bottomright.png */,
+				596B03A916C4BCC900C4F109 /* bottomright@2x.png */,
+				596B03AA16C4BCC900C4F109 /* topleft.png */,
+				596B03AB16C4BCC900C4F109 /* topleft@2x.png */,
+				596B03AC16C4BCC900C4F109 /* topright.png */,
+				596B03AD16C4BCC900C4F109 /* topright@2x.png */,
 			);
 			name = Walls;
 			sourceTree = "<group>";
@@ -494,6 +518,14 @@
 				5906AE8016A0DD8200AB7C8D /* selected@2x.png in Resources */,
 				598A64AA16AE0CD400617E77 /* safe.png in Resources */,
 				598A64AB16AE0CD400617E77 /* safe@2x.png in Resources */,
+				596B03AE16C4BCC900C4F109 /* bottomleft.png in Resources */,
+				596B03AF16C4BCC900C4F109 /* bottomleft@2x.png in Resources */,
+				596B03B016C4BCC900C4F109 /* bottomright.png in Resources */,
+				596B03B116C4BCC900C4F109 /* bottomright@2x.png in Resources */,
+				596B03B216C4BCC900C4F109 /* topleft.png in Resources */,
+				596B03B316C4BCC900C4F109 /* topleft@2x.png in Resources */,
+				596B03B416C4BCC900C4F109 /* topright.png in Resources */,
+				596B03B516C4BCC900C4F109 /* topright@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
