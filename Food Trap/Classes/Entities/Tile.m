@@ -55,5 +55,15 @@
     return CGPointMake(self.frame.origin.x, self.frame.origin.y);
 }
 
+-(void)renderWalls {
+//    if(![Path openNorth:self.tag]) {
+//        UIImageView *wall = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall2.png"]];
+//        [wall setFrame:self.frame];
+//        [wall setBackgroundColor:[UIColor clearColor]];
+//        [wall setOpaque:NO];
+//        [self.superview addSubview:wall];
+//    }
+}
+
 
 @end

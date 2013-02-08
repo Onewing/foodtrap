@@ -37,5 +37,5 @@
 
 -(BOOL)isAdjacent:(Tile *)tile;
 -(CGPoint)locationPoint;
-
+-(void)renderWalls;
 @end
