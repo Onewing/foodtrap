@@ -39,6 +39,7 @@
 		5943F498168F905F00773909 /* wall15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48C168F905F00773909 /* wall15@2x.png */; };
 		5943F499168F905F00773909 /* wall16.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48D168F905F00773909 /* wall16.png */; };
 		5943F49A168F905F00773909 /* wall16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48E168F905F00773909 /* wall16@2x.png */; };
+		594C38BA16C87450002D8B49 /* SafeZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C38B916C87450002D8B49 /* SafeZone.m */; };
 		595A609916980740007E9849 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609816980740007E9849 /* Animal.m */; };
 		595A609D16980754007E9849 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609C16980754007E9849 /* Mouse.m */; };
 		59654709168592A000DB767B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59654708168592A000DB767B /* Tile.m */; };
@@ -138,6 +139,8 @@
 		5943F48C168F905F00773909 /* wall15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall15@2x.png"; path = "Resources/Walls/wall15@2x.png"; sourceTree = "<group>"; };
 		5943F48D168F905F00773909 /* wall16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall16.png; path = Resources/Walls/wall16.png; sourceTree = "<group>"; };
 		5943F48E168F905F00773909 /* wall16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall16@2x.png"; path = "Resources/Walls/wall16@2x.png"; sourceTree = "<group>"; };
+		594C38B816C87450002D8B49 /* SafeZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SafeZone.h; path = Entities/SafeZone.h; sourceTree = "<group>"; };
+		594C38B916C87450002D8B49 /* SafeZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SafeZone.m; path = Entities/SafeZone.m; sourceTree = "<group>"; };
 		595A609716980740007E9849 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Entities/Animal.h; sourceTree = "<group>"; };
 		595A609816980740007E9849 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = Entities/Animal.m; sourceTree = "<group>"; };
 		595A609B16980754007E9849 /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mouse.h; path = Entities/Mouse.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				595A609C16980754007E9849 /* Mouse.m */,
 				59A608A816A271DE003BF4C7 /* Snake.h */,
 				59A608A916A271DE003BF4C7 /* Snake.m */,
+				594C38B816C87450002D8B49 /* SafeZone.h */,
+				594C38B916C87450002D8B49 /* SafeZone.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 				595A609916980740007E9849 /* Animal.m in Sources */,
 				595A609D16980754007E9849 /* Mouse.m in Sources */,
 				59A608AA16A271DE003BF4C7 /* Snake.m in Sources */,
+				594C38BA16C87450002D8B49 /* SafeZone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

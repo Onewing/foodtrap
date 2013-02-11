@@ -12,6 +12,7 @@
 #import "Animal.h"
 #import "Mouse.h"
 #import "Snake.h"
+#import "SafeZone.h"
 
 @implementation Level
 
@@ -58,7 +59,7 @@
     /// North Tiles
     if(!tile.north && [Path openNorth:tile.tag]) {
         Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-30) withEvent:nil];
-        if([north class] == [Tile class] && north && north.tag != TAG_WALL) {
+        if([north isKindOfClass:[Tile class]] && north && north.tag != TAG_WALL) {
             tile.north = [[Path alloc] initWithTile:north];
             north.south = [[Path alloc] initWithTile:tile];
         }
@@ -68,7 +69,7 @@
     /// South Tiles
     if(!tile.south && [Path openSouth:tile.tag]) {
         Tile *south = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y+33) withEvent:nil];
-        if([south class] == [Tile class] && south && south.tag != TAG_WALL) {
+        if([south isKindOfClass:[Tile class]] && south && south.tag != TAG_WALL) {
             tile.south = [[Path alloc] initWithTile:south];
             south.north = [[Path alloc] initWithTile:tile];
         }
@@ -77,7 +78,7 @@
     /// West Tiles
     if(!tile.west && [Path openWest:tile.tag]) {
         Tile *west = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x - 30, tile.frame.origin.y) withEvent:nil];
-        if([west class] == [Tile class] && west && west.tag != TAG_WALL) {
+        if([west isKindOfClass:[Tile class]] && west && west.tag != TAG_WALL) {
             tile.west = [[Path alloc] initWithTile:west];
             west.east = [[Path alloc] initWithTile:tile];
         }
@@ -86,7 +87,7 @@
     /// East Tiles
     if(!tile.east && [Path openEast:tile.tag]){
         Tile *east = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x + 33, tile.frame.origin.y) withEvent:nil];
-        if([east class] == [Tile class] && east && east.tag != TAG_WALL) {
+        if([east isKindOfClass:[Tile class]] && east && east.tag != TAG_WALL) {
             tile.east = [[Path alloc] initWithTile:east];
             east.west = [[Path alloc] initWithTile:tile];
         }
@@ -99,7 +100,7 @@
     [animal setUserInteractionEnabled:NO];
     Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
     [animal setUserInteractionEnabled:YES];
-    if ([location class] == [Tile class]) {
+    if ([location isKindOfClass:[Tile class]]) {
         animal.tileLocation.animal = nil;
         
         location.animal = animal;
@@ -116,28 +117,6 @@
     animal.delegate = self;
     [self.animals addObject:animal];
 }
-//
-//-(Animal *)processAnimal:(Animal *)data at:(Tile *)tile{
-////    [self setAnimalTile:animal];
-////    animal.img = [[animal subviews] objectAtIndex:0];
-//    Animal *animal;
-//    if ([data class] == [Mouse class]) {
-//        animal = [[Mouse alloc] initWithFrame:tile.frame];
-//        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Mouse.png"]];
-//        [animal addSubview:img];
-//        animal.img = img;
-//    }
-//    if([data class] == [Snake class]) {
-//        animal = [[Snake alloc] initWithFrame:tile.frame];
-//        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Snake.png"]];
-//        [animal addSubview:img];
-//        animal.img = img;
-//    }
-//    animal.delegate = self;
-//    [self.animals addObject:animal];
-//    
-//    return animal;
-//}
 
 -(void)animalTouched:(Animal *)touchedAnimal {
     if (touchedAnimal.alive) {
@@ -198,9 +177,16 @@
 }
 
 -(void)animalLogic {
+    /// The level is complete, unless anything fails to meet the criteria in the loop below
+    BOOL levelComplete = YES;
+    
     for(Animal *animal in self.animals) {
         if(animal.alive) {
             [animal eat];
+        }
+        
+        if ([animal.tileLocation class] != [SafeZone class]) {
+            levelComplete = NO;
         }
     }
     
