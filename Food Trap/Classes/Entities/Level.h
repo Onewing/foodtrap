@@ -11,6 +11,12 @@
 #import "Screen.h"
 #import "Animal.h"
 
+typedef enum levelState {
+    PAUSED = 0,
+    PLAYING,
+    COMPLETED
+} LEVELSTATE;
+
 @interface Level : Screen <EntityDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
@@ -18,6 +24,8 @@
 
 @property (nonatomic, strong) NSMutableArray *tiles;
 @property (nonatomic, strong) NSMutableArray *animals;
+@property (nonatomic, assign) BOOL levelComplete;
+@property (nonatomic, assign) LEVELSTATE state;
 
 @property (nonatomic, strong) Animal *animalSelected;
 

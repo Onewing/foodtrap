@@ -36,23 +36,7 @@
     if(tile == nil || tile.hidden || tile.tag == 0 || tile.tag == TAG_WALL) {
         return nil;
     }
-//    UIImageView *imgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wall9.png"]];
-//    [tile addSubview:imgview];
-    /// Get the right animals into the layer
-//    for(UIView *view in [tile subviews]) {
-//        if([view isKindOfClass:[Animal class]]) {
-//            Animal *animalData = (Animal *)view;
-//            
-//            Animal *newAnimal = [self processAnimal:animalData at:tile];
-//            
-//            [tile.superview addSubview:newAnimal];
-//            [animalData removeFromSuperview];
-//            [tile.superview sendSubviewToBack:newAnimal];
-//            
-//            tile.animal = newAnimal;
-//            newAnimal.tileLocation = tile;
-//        }
-//    }
+
     /// Add the wall graphics into the layer
     [tile renderWalls];
     
@@ -130,7 +114,6 @@
 }
 
 -(void)entityTouched:(NSNotification *)notification {
-//    NSLog(@"Entity Touched:  %@", [notification userInfo]);
     if(self.animalSelected.moving) {
         return;
     }
@@ -163,33 +146,48 @@
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Main Level Logic
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    UITouch *t = [[event allTouches] anyObject];
-    if(self.viewAnimalLayer == t.view) {
-        /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
-        CGPoint loc = [t locationInView:t.view];
-        UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
-        if ([touch isKindOfClass:[Entity class]]) {
-            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
+    
+    if(self.state == PLAYING) {
+        UITouch *t = [[event allTouches] anyObject];
+        if(self.viewAnimalLayer == t.view) {
+            /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
+            CGPoint loc = [t locationInView:t.view];
+            UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
+            if ([touch isKindOfClass:[Entity class]]) {
+                [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
+            }
+        }
+        else if ([t.view isKindOfClass:[Entity class]]) {
+            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:t.view forKey:@"entity"]]];
         }
     }
 }
 
 -(void)animalLogic {
-    /// The level is complete, unless anything fails to meet the criteria in the loop below
-    BOOL levelComplete = YES;
-    
-    for(Animal *animal in self.animals) {
-        if(animal.alive) {
-            [animal eat];
-        }
+    if (self.state == PLAYING) {
+        /// The level is complete, unless anything fails to meet the criteria in the loop below
+        BOOL levelComplete = YES;
         
-        if ([animal.tileLocation class] != [SafeZone class]) {
-            levelComplete = NO;
+        for(Animal *animal in self.animals) {
+            if(animal.alive) {
+                [animal eat];
+            }
+            
+            if ([animal.tileLocation class] != [SafeZone class]) {
+                levelComplete = NO;
+            }
+        }
+        self.levelComplete = levelComplete;
+        
+        if(self.levelComplete) {
+            self.state = COMPLETED;
         }
     }
-    
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -207,13 +205,9 @@
 
 
 
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark View Life Cycle
-
-
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.tiles = [NSMutableArray array];
@@ -231,6 +225,9 @@
     }
     NSLog(@"Tiles: %@", self.tiles);
     NSLog(@"Animals:  %@", self.animals);
+    
+    self.levelComplete = NO;
+    self.state = PLAYING;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entityTouched:) name:@"EntityTouched" object:nil];
 }

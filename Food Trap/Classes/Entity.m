@@ -93,7 +93,9 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:self forKey:@"entity"]];
+    
+    /// Touch logic being handled in Level touchesBegan
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:self forKey:@"entity"]];
 }
 
 

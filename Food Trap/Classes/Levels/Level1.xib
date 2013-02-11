@@ -441,6 +441,7 @@
 									<bytes key="NSRGB">MSAxIDEgMAA</bytes>
 								</object>
 								<int key="IBUITag">2</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUIView" id="267131966">

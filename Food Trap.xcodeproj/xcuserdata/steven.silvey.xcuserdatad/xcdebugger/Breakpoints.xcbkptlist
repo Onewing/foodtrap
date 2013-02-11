@@ -108,16 +108,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "382235972.470657"
+         timestampString = "382237196.369378"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "110"
-         endingLineNumber = "110"
-         landmarkName = "-setAnimalTile:"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
+         landmarkName = "-entityTouched:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "382236129.47183"
+         timestampString = "382237279.444863"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "145"
-         endingLineNumber = "145"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
          landmarkName = "-entityTouched:"
          landmarkType = "5">
       </FileBreakpoint>
