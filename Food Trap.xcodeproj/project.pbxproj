@@ -41,6 +41,7 @@
 		5943F49A168F905F00773909 /* wall16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48E168F905F00773909 /* wall16@2x.png */; };
 		594C38BA16C87450002D8B49 /* SafeZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C38B916C87450002D8B49 /* SafeZone.m */; };
 		5955C4AF16C9C57200A1A671 /* Level2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5955C4AE16C9C57200A1A671 /* Level2.xib */; };
+		5955C4B616C9CFB000A1A671 /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955C4B516C9CFAF00A1A671 /* LevelLayer.m */; };
 		595A609916980740007E9849 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609816980740007E9849 /* Animal.m */; };
 		595A609D16980754007E9849 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609C16980754007E9849 /* Mouse.m */; };
 		59654709168592A000DB767B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59654708168592A000DB767B /* Tile.m */; };
@@ -143,6 +144,8 @@
 		594C38B816C87450002D8B49 /* SafeZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SafeZone.h; path = Entities/SafeZone.h; sourceTree = "<group>"; };
 		594C38B916C87450002D8B49 /* SafeZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SafeZone.m; path = Entities/SafeZone.m; sourceTree = "<group>"; };
 		5955C4AE16C9C57200A1A671 /* Level2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Level2.xib; path = Levels/Level2.xib; sourceTree = "<group>"; };
+		5955C4B416C9CFAF00A1A671 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayer.h; sourceTree = "<group>"; };
+		5955C4B516C9CFAF00A1A671 /* LevelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayer.m; sourceTree = "<group>"; };
 		595A609716980740007E9849 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Entities/Animal.h; sourceTree = "<group>"; };
 		595A609816980740007E9849 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = Entities/Animal.m; sourceTree = "<group>"; };
 		595A609B16980754007E9849 /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mouse.h; path = Entities/Mouse.h; sourceTree = "<group>"; };
@@ -418,6 +421,8 @@
 				59F0D3B7167EDDFF00144155 /* TitleScreen.xib */,
 				5965473F16865AAA00DB767B /* Level.h */,
 				5965474016865AAA00DB767B /* Level.m */,
+				5955C4B416C9CFAF00A1A671 /* LevelLayer.h */,
+				5955C4B516C9CFAF00A1A671 /* LevelLayer.m */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				595A609D16980754007E9849 /* Mouse.m in Sources */,
 				59A608AA16A271DE003BF4C7 /* Snake.m in Sources */,
 				594C38BA16C87450002D8B49 /* SafeZone.m in Sources */,
+				5955C4B616C9CFB000A1A671 /* LevelLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

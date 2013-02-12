@@ -21,6 +21,7 @@ typedef enum levelState {
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 @property (nonatomic, strong) IBOutlet UIView *viewAnimalLayer;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollLayer;
 
 @property (nonatomic, strong) NSMutableArray *tiles;
 @property (nonatomic, strong) NSMutableArray *animals;

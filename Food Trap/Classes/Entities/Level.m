@@ -14,6 +14,7 @@
 #import "Snake.h"
 #import "SafeZone.h"
 
+#import "LevelLayer.h"
 @implementation Level
 
 
@@ -114,6 +115,10 @@
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Notification Receivers
+
 -(void)entityTouched:(NSNotification *)notification {
     if(self.animalSelected.moving) {
         return;
@@ -143,6 +148,22 @@
         
         
         
+    }
+}
+
+-(void)layerTouched:(NSNotification *)notification {
+    if(self.animalSelected.moving) {
+        return;
+    }
+    
+    UITouch *l = [[notification userInfo] objectForKey:@"layer"];
+    if(self.viewAnimalLayer == l.view) {
+        /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
+        CGPoint loc = [l locationInView:l.view];
+        UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
+        if ([touch isKindOfClass:[Entity class]]) {
+            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
+        }
     }
 }
 
@@ -231,6 +252,12 @@
     self.state = PLAYING;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entityTouched:) name:@"EntityTouched" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerTouched:) name:@"LayerTouched" object:nil];
+    
+    [self.scrollLayer setContentSize:CGSizeMake(640, 480)];
+    [self.scrollLayer setMaximumZoomScale:1.0f];
+    [self.scrollLayer setMinimumZoomScale:0.1f];
+     
 }
 
 -(void)destroy {

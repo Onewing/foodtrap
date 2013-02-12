@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "382322650.838134"
+         timestampString = "382325018.571445"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
+         startingLineNumber = "134"
+         endingLineNumber = "134"
          landmarkName = "-entityTouched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "382322650.838134"
+         timestampString = "382325018.571445"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-entityTouched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +138,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Food Trap/Classes/Entities/Level.m"
-         timestampString = "382322944.903135"
+         timestampString = "382325018.571445"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "160"
-         endingLineNumber = "160"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
+         landmarkName = "-touchesBegan:withEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Food Trap/Classes/Entities/Level.m"
+         timestampString = "382325018.571445"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "175"
+         endingLineNumber = "175"
          landmarkName = "-touchesBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>
