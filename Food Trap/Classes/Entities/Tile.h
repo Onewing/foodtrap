@@ -11,6 +11,10 @@
 #import "Path.h"
 @class Animal;
 
+#define TILEW	40
+#define TILEH	40
+
+
 #define TAG_WALL_WEST               1
 #define TAG_WALL_NORTH              2
 #define TAG_WALL_EAST               3

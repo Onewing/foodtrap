@@ -12,7 +12,7 @@
 
 -(NSString *)description {
     return [[NSString alloc] initWithFormat:@"\nPosition: (%f,%f)\nNorth:%@\nSouth:%@\nEast:%@\nWest:%@\n",
-            self.frame.origin.x/32.0f, self.frame.origin.y/32.0f,
+            self.frame.origin.x/TILEW, self.frame.origin.y/TILEH,
             self.north.tile == nil ? @"None" : @"Yes",
             self.south.tile == nil ? @"None" : @"Yes",
             self.east.tile == nil ? @"None" : @"Yes",

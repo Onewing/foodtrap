@@ -42,7 +42,7 @@
     
     /// North Tiles
     if(!tile.north && [Path openNorth:tile.tag]) {
-        Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-30) withEvent:nil];
+        Tile *north = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y-TILEH) withEvent:nil];
         if([north isKindOfClass:[Tile class]] && north && north.tag != TAG_WALL) {
             tile.north = [[Path alloc] initWithTile:north];
             north.south = [[Path alloc] initWithTile:tile];
@@ -52,7 +52,7 @@
     
     /// South Tiles
     if(!tile.south && [Path openSouth:tile.tag]) {
-        Tile *south = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y+33) withEvent:nil];
+        Tile *south = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x, tile.frame.origin.y+TILEH) withEvent:nil];
         if([south isKindOfClass:[Tile class]] && south && south.tag != TAG_WALL) {
             tile.south = [[Path alloc] initWithTile:south];
             south.north = [[Path alloc] initWithTile:tile];
@@ -61,7 +61,7 @@
     
     /// West Tiles
     if(!tile.west && [Path openWest:tile.tag]) {
-        Tile *west = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x - 30, tile.frame.origin.y) withEvent:nil];
+        Tile *west = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x - TILEW, tile.frame.origin.y) withEvent:nil];
         if([west isKindOfClass:[Tile class]] && west && west.tag != TAG_WALL) {
             tile.west = [[Path alloc] initWithTile:west];
             west.east = [[Path alloc] initWithTile:tile];
@@ -70,7 +70,7 @@
     
     /// East Tiles
     if(!tile.east && [Path openEast:tile.tag]){
-        Tile *east = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x + 33, tile.frame.origin.y) withEvent:nil];
+        Tile *east = (Tile *)[self.viewTileLayer hitTest:CGPointMake(tile.frame.origin.x + TILEW, tile.frame.origin.y) withEvent:nil];
         if([east isKindOfClass:[Tile class]] && east && east.tag != TAG_WALL) {
             tile.east = [[Path alloc] initWithTile:east];
             east.west = [[Path alloc] initWithTile:tile];
@@ -108,6 +108,7 @@
             [self.animalSelected.selected removeFromSuperview];
         self.animalSelected = touchedAnimal;
         UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
+        [imgSelected setFrame:CGRectMake(0, 0, TILEW, TILEH)];
         [self.animalSelected addSubview:imgSelected];
         self.animalSelected.selected = imgSelected;
     }
