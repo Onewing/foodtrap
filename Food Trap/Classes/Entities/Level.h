@@ -17,7 +17,7 @@ typedef enum levelState {
     COMPLETED
 } LEVELSTATE;
 
-@interface Level : Screen <EntityDelegate>
+@interface Level : Screen <EntityDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 @property (nonatomic, strong) IBOutlet UIView *viewAnimalLayer;

@@ -120,6 +120,7 @@
 #pragma mark Notification Receivers
 
 -(void)entityTouched:(NSNotification *)notification {
+    if(self.state == PLAYING) {
     if(self.animalSelected.moving) {
         return;
     }
@@ -148,6 +149,7 @@
         
         
         
+    }
     }
 }
 
@@ -198,11 +200,12 @@
         for(Animal *animal in self.animals) {
             if(animal.alive) {
                 [animal eat];
-            }
+                
+                if ([animal.tileLocation class] != [SafeZone class]) {
+                    levelComplete = NO;
+                }
+            }            
             
-            if ([animal.tileLocation class] != [SafeZone class]) {
-                levelComplete = NO;
-            }
         }
         self.levelComplete = levelComplete;
         
@@ -224,6 +227,41 @@
         [self animalLogic];
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark UIScrollView Delegate
+-(void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
+    NSLog(@"testy test");
+}
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return [[self.scrollLayer subviews] objectAtIndex:0];
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    UIView *subView = [scrollView.subviews objectAtIndex:0];
+    
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width)?
+    (scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5 : 0.0;
+    
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height)?
+    (scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5 : 0.0;
+    
+    subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
+                                 scrollView.contentSize.height * 0.5 + offsetY);
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"testy test2");
+}
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"testy test3");
+}
+
 
 
 
@@ -254,9 +292,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entityTouched:) name:@"EntityTouched" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerTouched:) name:@"LayerTouched" object:nil];
     
-    [self.scrollLayer setContentSize:CGSizeMake(640, 480)];
+    [self.scrollLayer setContentSize:CGSizeMake(1640, 480)];
     [self.scrollLayer setMaximumZoomScale:1.0f];
-    [self.scrollLayer setMinimumZoomScale:0.1f];
+    [self.scrollLayer setMinimumZoomScale:0.5f];
+    [self.scrollLayer setZoomScale:1.0f];
+
      
 }
 
