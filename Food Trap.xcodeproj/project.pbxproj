@@ -10,8 +10,6 @@
 		5906AE7F16A0DD8200AB7C8D /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5906AE7D16A0DD8200AB7C8D /* selected.png */; };
 		5906AE8016A0DD8200AB7C8D /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5906AE7E16A0DD8200AB7C8D /* selected@2x.png */; };
 		593B238A1660933E004FE031 /* FTArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23711660933E004FE031 /* FTArea.m */; };
-		593B238B1660933E004FE031 /* FTEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23731660933E004FE031 /* FTEnemy.m */; };
-		593B238C1660933E004FE031 /* FTEnemy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23741660933E004FE031 /* FTEnemy.xib */; };
 		593B238D1660933E004FE031 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23761660933E004FE031 /* Entity.m */; };
 		593B238E1660933E004FE031 /* FTKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23781660933E004FE031 /* FTKey.m */; };
 		593B238F1660933E004FE031 /* FTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B237A1660933E004FE031 /* FTPlayer.m */; };
@@ -103,9 +101,6 @@
 		593B236F1660933E004FE031 /* DevTestFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevTestFlags.h; sourceTree = "<group>"; };
 		593B23701660933E004FE031 /* FTArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTArea.h; sourceTree = "<group>"; };
 		593B23711660933E004FE031 /* FTArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTArea.m; sourceTree = "<group>"; };
-		593B23721660933E004FE031 /* FTEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTEnemy.h; sourceTree = "<group>"; };
-		593B23731660933E004FE031 /* FTEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTEnemy.m; sourceTree = "<group>"; };
-		593B23741660933E004FE031 /* FTEnemy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTEnemy.xib; sourceTree = "<group>"; };
 		593B23751660933E004FE031 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		593B23761660933E004FE031 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		593B23771660933E004FE031 /* FTKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTKey.h; sourceTree = "<group>"; };
@@ -255,9 +250,6 @@
 				593B236F1660933E004FE031 /* DevTestFlags.h */,
 				593B23701660933E004FE031 /* FTArea.h */,
 				593B23711660933E004FE031 /* FTArea.m */,
-				593B23721660933E004FE031 /* FTEnemy.h */,
-				593B23731660933E004FE031 /* FTEnemy.m */,
-				593B23741660933E004FE031 /* FTEnemy.xib */,
 				593B23771660933E004FE031 /* FTKey.h */,
 				593B23781660933E004FE031 /* FTKey.m */,
 				593B23791660933E004FE031 /* FTPlayer.h */,
@@ -479,7 +471,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				593B238C1660933E004FE031 /* FTEnemy.xib in Resources */,
 				593B23911660933E004FE031 /* vTile.xib in Resources */,
 				593B23921660933E004FE031 /* FTViewController.xib in Resources */,
 				593B23931660933E004FE031 /* InfoPlist.strings in Resources */,
@@ -551,7 +542,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				593B238A1660933E004FE031 /* FTArea.m in Sources */,
-				593B238B1660933E004FE031 /* FTEnemy.m in Sources */,
 				593B238D1660933E004FE031 /* Entity.m in Sources */,
 				593B238E1660933E004FE031 /* FTKey.m in Sources */,
 				593B238F1660933E004FE031 /* FTPlayer.m in Sources */,

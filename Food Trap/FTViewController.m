@@ -10,7 +10,7 @@
 #import "FTTile.h"
 #import "FTArea.h"
 #import "FTKey.h"
-#import "FTEnemy.h"
+
 
 @interface FTViewController ()
 
