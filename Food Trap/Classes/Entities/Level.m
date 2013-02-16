@@ -120,7 +120,7 @@
 #pragma mark Notification Receivers
 
 -(void)entityTouched:(NSNotification *)notification {
-    if(self.state == PLAYING) {
+    
     if(self.animalSelected.moving) {
         return;
     }
@@ -150,47 +150,32 @@
         
         
     }
-    }
+    
 }
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Main Level Logic
 -(void)layerTouched:(NSNotification *)notification {
     if(self.animalSelected.moving) {
         return;
     }
     
     UITouch *l = [[notification userInfo] objectForKey:@"layer"];
-    if(self.viewAnimalLayer == l.view) {
-        /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
-        CGPoint loc = [l locationInView:l.view];
-        UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
-        if ([touch isKindOfClass:[Entity class]]) {
-            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
-        }
-    }
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark Main Level Logic
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    
     if(self.state == PLAYING) {
-        UITouch *t = [[event allTouches] anyObject];
-        if(self.viewAnimalLayer == t.view) {
+        if(self.viewAnimalLayer == l.view) {
             /// The "viewAnimalLayer" will capture the touch, so we need to manually pass it on to the next layer, viewTileLayer
-            CGPoint loc = [t locationInView:t.view];
+            CGPoint loc = [l locationInView:l.view];
             UIView *touch = [self.viewTileLayer hitTest:loc withEvent:nil];
             if ([touch isKindOfClass:[Entity class]]) {
                 [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:touch forKey:@"entity"]]];
             }
         }
-        else if ([t.view isKindOfClass:[Entity class]]) {
-            [self entityTouched:[NSNotification notificationWithName:@"EntityTouched" object:nil userInfo:[NSDictionary dictionaryWithObject:t.view forKey:@"entity"]]];
-        }
     }
 }
+
 
 -(void)animalLogic {
     if (self.state == PLAYING) {
@@ -231,10 +216,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark UIScrollView Delegate
--(void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
-    NSLog(@"testy test");
-}
-
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return [[self.scrollLayer subviews] objectAtIndex:0];
 }
@@ -252,18 +233,6 @@
     subView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX,
                                  scrollView.contentSize.height * 0.5 + offsetY);
 }
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"testy test2");
-}
-
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    NSLog(@"testy test3");
-}
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -292,8 +261,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entityTouched:) name:@"EntityTouched" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerTouched:) name:@"LayerTouched" object:nil];
     
+    
+    /// Setup the zooming/scrolling stuff
     [self.scrollLayer setContentSize:CGSizeMake(1640, 480)];
-    [self.scrollLayer setMaximumZoomScale:1.0f];
+    [self.scrollLayer setMaximumZoomScale:1.5f];
     [self.scrollLayer setMinimumZoomScale:0.5f];
     [self.scrollLayer setZoomScale:1.0f];
 
@@ -302,6 +273,7 @@
 
 -(void)destroy {
     [[NSNotificationCenter defaultCenter] removeObserver:@"EntityTouched"];
+    [[NSNotificationCenter defaultCenter] removeObserver:@"LayerTouched"];
 }
 
 -(void)viewDidUnload {
