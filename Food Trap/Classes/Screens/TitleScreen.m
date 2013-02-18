@@ -19,7 +19,7 @@
 
 -(IBAction)showTitle {
     NSLog(@"Touch");
-    Level *vc = [[Level alloc] initWithNibName:@"Level1" bundle:[NSBundle mainBundle]];
+    Level *vc = [[Level alloc] initWithNibName:@"Level2" bundle:[NSBundle mainBundle]];
     [[Game sharedGame] show:vc];
 }
 

@@ -82,6 +82,9 @@
 		597CF92F169656340060F4F9 /* snake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597CF92B169656340060F4F9 /* snake@2x.png */; };
 		598A64AA16AE0CD400617E77 /* safe.png in Resources */ = {isa = PBXBuildFile; fileRef = 598A64A816AE0CD400617E77 /* safe.png */; };
 		598A64AB16AE0CD400617E77 /* safe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 598A64A916AE0CD400617E77 /* safe@2x.png */; };
+		598D11A416CF08BB004A9394 /* eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 598D11A216CF08BB004A9394 /* eagle.png */; };
+		598D11A516CF08BB004A9394 /* eagle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 598D11A316CF08BB004A9394 /* eagle@2x.png */; };
+		598D11A816CF08E4004A9394 /* Eagle.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D11A716CF08E4004A9394 /* Eagle.m */; };
 		59A608AA16A271DE003BF4C7 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A608A916A271DE003BF4C7 /* Snake.m */; };
 		59AE33B71673E02F007BE47E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AE33B61673E02F007BE47E /* Game.m */; };
 		59C9656A15183516005B1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9656915183516005B1120 /* UIKit.framework */; };
@@ -188,6 +191,10 @@
 		597CF92B169656340060F4F9 /* snake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snake@2x.png"; sourceTree = "<group>"; };
 		598A64A816AE0CD400617E77 /* safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safe.png; path = Resources/safe.png; sourceTree = "<group>"; };
 		598A64A916AE0CD400617E77 /* safe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe@2x.png"; path = "Resources/safe@2x.png"; sourceTree = "<group>"; };
+		598D11A216CF08BB004A9394 /* eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eagle.png; sourceTree = "<group>"; };
+		598D11A316CF08BB004A9394 /* eagle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle@2x.png"; sourceTree = "<group>"; };
+		598D11A616CF08E4004A9394 /* Eagle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Eagle.h; path = Entities/Eagle.h; sourceTree = "<group>"; };
+		598D11A716CF08E4004A9394 /* Eagle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Eagle.m; path = Entities/Eagle.m; sourceTree = "<group>"; };
 		59A608A816A271DE003BF4C7 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = Entities/Snake.h; sourceTree = "<group>"; };
 		59A608A916A271DE003BF4C7 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Snake.m; path = Entities/Snake.m; sourceTree = "<group>"; };
 		59AE33B51673E02F007BE47E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -345,6 +352,8 @@
 				597CF92B169656340060F4F9 /* snake@2x.png */,
 				5906AE7D16A0DD8200AB7C8D /* selected.png */,
 				5906AE7E16A0DD8200AB7C8D /* selected@2x.png */,
+				598D11A216CF08BB004A9394 /* eagle.png */,
+				598D11A316CF08BB004A9394 /* eagle@2x.png */,
 			);
 			name = Animals;
 			path = Resources/Animals;
@@ -367,6 +376,8 @@
 				59A608A916A271DE003BF4C7 /* Snake.m */,
 				594C38B816C87450002D8B49 /* SafeZone.h */,
 				594C38B916C87450002D8B49 /* SafeZone.m */,
+				598D11A616CF08E4004A9394 /* Eagle.h */,
+				598D11A716CF08E4004A9394 /* Eagle.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -531,6 +542,8 @@
 				596B03B416C4BCC900C4F109 /* topright.png in Resources */,
 				596B03B516C4BCC900C4F109 /* topright@2x.png in Resources */,
 				5955C4AF16C9C57200A1A671 /* Level2.xib in Resources */,
+				598D11A416CF08BB004A9394 /* eagle.png in Resources */,
+				598D11A516CF08BB004A9394 /* eagle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +575,7 @@
 				59A608AA16A271DE003BF4C7 /* Snake.m in Sources */,
 				594C38BA16C87450002D8B49 /* SafeZone.m in Sources */,
 				5955C4B616C9CFB000A1A671 /* LevelLayer.m in Sources */,
+				598D11A816CF08E4004A9394 /* Eagle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
