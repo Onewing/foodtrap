@@ -64,6 +64,9 @@
             [animal removeFromSuperview];
             animal.alive = NO;
             animal.tileLocation.animal = nil;
+            
+            /// Only eat one thing at a time
+            break;
         }
     }
 }
