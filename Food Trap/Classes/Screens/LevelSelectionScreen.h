@@ -13,4 +13,6 @@
 @property (nonatomic, strong) IBOutlet UIView *scrollContent;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollLayer;
 
+-(IBAction)startLevel:(id)sender;
+
 @end

@@ -60,7 +60,7 @@ static Game *sharedGame = nil;
 
 
 -(void)gameUpdate:(CADisplayLink *)displayLink {
-    [self.screenManager.active update:displayLink];
+    [self.screenManager.activeScreen update:displayLink];
 }
 
 -(void)gameRender {

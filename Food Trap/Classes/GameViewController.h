@@ -11,7 +11,7 @@
 
 @interface GameViewController : UIViewController
 
-@property (nonatomic, strong) Screen *active;
+@property (nonatomic, strong) Screen *activeScreen;
 @property (nonatomic, strong) Screen *incoming;
 
 -(void)show:(Screen *)scr;

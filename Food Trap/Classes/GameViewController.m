@@ -36,9 +36,9 @@
 {
     [super viewDidLoad];
     
-    self.active = [[SplashScreen alloc] init];
-    self.active.active = YES;
-    [self.view addSubview:self.active.view];
+    self.activeScreen = [[SplashScreen alloc] init];
+    self.activeScreen.active = YES;
+    [self.view addSubview:self.activeScreen.view];
 
 }
 
@@ -52,16 +52,16 @@
     self.incoming = scr;
     
     
-    [self.active viewWillDisappear:YES];
+    [self.activeScreen viewWillDisappear:YES];
     [self.incoming viewWillAppear:YES];
     
-    [self.active.view removeFromSuperview];
+    [self.activeScreen.view removeFromSuperview];
     [self.view addSubview:self.incoming.view];
     
-    [self.active viewDidDisappear:YES];
+    [self.activeScreen viewDidDisappear:YES];
     [self.incoming viewDidAppear:YES];
     
-    self.active = scr;
+    self.activeScreen = scr;
     self.incoming = nil;
     
 }

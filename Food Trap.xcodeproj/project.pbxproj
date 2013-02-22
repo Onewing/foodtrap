@@ -38,7 +38,7 @@
 		5943F499168F905F00773909 /* wall16.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48D168F905F00773909 /* wall16.png */; };
 		5943F49A168F905F00773909 /* wall16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F48E168F905F00773909 /* wall16@2x.png */; };
 		594C38BA16C87450002D8B49 /* SafeZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C38B916C87450002D8B49 /* SafeZone.m */; };
-		5955C4AF16C9C57200A1A671 /* Level2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5955C4AE16C9C57200A1A671 /* Level2.xib */; };
+		5955C4AF16C9C57200A1A671 /* Level1-2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5955C4AE16C9C57200A1A671 /* Level1-2.xib */; };
 		5955C4B616C9CFB000A1A671 /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5955C4B516C9CFAF00A1A671 /* LevelLayer.m */; };
 		595A609916980740007E9849 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609816980740007E9849 /* Animal.m */; };
 		595A609D16980754007E9849 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 595A609C16980754007E9849 /* Mouse.m */; };
@@ -65,7 +65,7 @@
 		5965473616859C0E00DB767B /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473516859C0E00DB767B /* Template.xib */; };
 		5965473916859E1E00DB767B /* wall10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965473716859E1E00DB767B /* wall10.png */; };
 		5965473A16859E1E00DB767B /* wall10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5965473816859E1E00DB767B /* wall10@2x.png */; };
-		5965473C16859E5C00DB767B /* Level1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473B16859E5C00DB767B /* Level1.xib */; };
+		5965473C16859E5C00DB767B /* Level1-1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473B16859E5C00DB767B /* Level1-1.xib */; };
 		5965473E1686597D00DB767B /* Tiles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5965473D1686597D00DB767B /* Tiles.xib */; };
 		5965474116865AAA00DB767B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 5965474016865AAA00DB767B /* Level.m */; };
 		596B03AE16C4BCC900C4F109 /* bottomleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 596B03A616C4BCC900C4F109 /* bottomleft.png */; };
@@ -145,7 +145,7 @@
 		5943F48E168F905F00773909 /* wall16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall16@2x.png"; path = "Resources/Walls/wall16@2x.png"; sourceTree = "<group>"; };
 		594C38B816C87450002D8B49 /* SafeZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SafeZone.h; path = Entities/SafeZone.h; sourceTree = "<group>"; };
 		594C38B916C87450002D8B49 /* SafeZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SafeZone.m; path = Entities/SafeZone.m; sourceTree = "<group>"; };
-		5955C4AE16C9C57200A1A671 /* Level2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Level2.xib; path = Levels/Level2.xib; sourceTree = "<group>"; };
+		5955C4AE16C9C57200A1A671 /* Level1-2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Level1-2.xib"; path = "Levels/Level1-2.xib"; sourceTree = "<group>"; };
 		5955C4B416C9CFAF00A1A671 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayer.h; sourceTree = "<group>"; };
 		5955C4B516C9CFAF00A1A671 /* LevelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayer.m; sourceTree = "<group>"; };
 		595A609716980740007E9849 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Entities/Animal.h; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		5965473516859C0E00DB767B /* Template.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Template.xib; path = Levels/Template.xib; sourceTree = "<group>"; };
 		5965473716859E1E00DB767B /* wall10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall10.png; path = Resources/Walls/wall10.png; sourceTree = "<group>"; };
 		5965473816859E1E00DB767B /* wall10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall10@2x.png"; path = "Resources/Walls/wall10@2x.png"; sourceTree = "<group>"; };
-		5965473B16859E5C00DB767B /* Level1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Level1.xib; path = Levels/Level1.xib; sourceTree = "<group>"; };
+		5965473B16859E5C00DB767B /* Level1-1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Level1-1.xib"; path = "Levels/Level1-1.xib"; sourceTree = "<group>"; };
 		5965473D1686597D00DB767B /* Tiles.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tiles.xib; path = Levels/Tiles.xib; sourceTree = "<group>"; };
 		5965473F16865AAA00DB767B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = ../Entities/Level.h; sourceTree = "<group>"; };
 		5965474016865AAA00DB767B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = ../Entities/Level.m; sourceTree = "<group>"; };
@@ -346,8 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				5965473516859C0E00DB767B /* Template.xib */,
-				5965473B16859E5C00DB767B /* Level1.xib */,
-				5955C4AE16C9C57200A1A671 /* Level2.xib */,
+				5965473B16859E5C00DB767B /* Level1-1.xib */,
+				5955C4AE16C9C57200A1A671 /* Level1-2.xib */,
 				5965473D1686597D00DB767B /* Tiles.xib */,
 			);
 			name = Levels;
@@ -527,7 +527,7 @@
 				5965473616859C0E00DB767B /* Template.xib in Resources */,
 				5965473916859E1E00DB767B /* wall10.png in Resources */,
 				5965473A16859E1E00DB767B /* wall10@2x.png in Resources */,
-				5965473C16859E5C00DB767B /* Level1.xib in Resources */,
+				5965473C16859E5C00DB767B /* Level1-1.xib in Resources */,
 				5965473E1686597D00DB767B /* Tiles.xib in Resources */,
 				5943F48F168F905F00773909 /* wall11.png in Resources */,
 				5943F490168F905F00773909 /* wall11@2x.png in Resources */,
@@ -557,7 +557,7 @@
 				596B03B316C4BCC900C4F109 /* topleft@2x.png in Resources */,
 				596B03B416C4BCC900C4F109 /* topright.png in Resources */,
 				596B03B516C4BCC900C4F109 /* topright@2x.png in Resources */,
-				5955C4AF16C9C57200A1A671 /* Level2.xib in Resources */,
+				5955C4AF16C9C57200A1A671 /* Level1-2.xib in Resources */,
 				598D11A416CF08BB004A9394 /* eagle.png in Resources */,
 				598D11A516CF08BB004A9394 /* eagle@2x.png in Resources */,
 				59ECA64B16D3022D0062EB4F /* ShipSelectionScreen.xib in Resources */,

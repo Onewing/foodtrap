@@ -15,6 +15,28 @@
 
 @implementation LevelSelectionScreen
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark IBActions
+-(IBAction)startLevel:(id)sender {    
+    if([sender isKindOfClass:[UIButton class]]) {
+        UIButton *buttonTapped = (UIButton *)sender;
+        
+        @try {
+            Level *vc = [[Level alloc] initWithNibName:[NSString stringWithFormat:@"Level1-%d", buttonTapped.tag] bundle:[NSBundle mainBundle]];
+            [[Game sharedGame] show:vc];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Error trying to read level!");
+        }
+        @finally {
+            
+        }
+        
+    }
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
