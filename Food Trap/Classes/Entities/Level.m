@@ -263,10 +263,12 @@
     
     
     /// Setup the zooming/scrolling stuff
-    [self.scrollLayer setContentSize:CGSizeMake(1640, 480)];
+    [self.scrollLayer setContentSize:self.viewContent.frame.size];
+    [self.scrollLayer addSubview:self.viewContent];
     [self.scrollLayer setMaximumZoomScale:1.5f];
     [self.scrollLayer setMinimumZoomScale:0.5f];
     [self.scrollLayer setZoomScale:1.0f];
+    
 
      
 }

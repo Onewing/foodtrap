@@ -27,7 +27,7 @@
             [[Game sharedGame] show:vc];
         }
         @catch (NSException *exception) {
-            NSLog(@"Error trying to read level!");
+            NSLog(@"Error trying to read level!  Reason:  %@", exception);
         }
         @finally {
             

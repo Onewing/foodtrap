@@ -19,6 +19,7 @@ typedef enum levelState {
 
 @interface Level : Screen <EntityDelegate, UIScrollViewDelegate>
 
+@property (nonatomic, strong) IBOutlet UIView *viewContent;
 @property (nonatomic, strong) IBOutlet UIView *viewTileLayer;
 @property (nonatomic, strong) IBOutlet UIView *viewAnimalLayer;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollLayer;
