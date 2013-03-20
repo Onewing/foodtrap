@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
-#import "Tile.h"
+#import "LevelElement.h"
 
-@interface Animal : Entity
-@property (nonatomic, strong) Tile *tileLocation;
-@property (nonatomic, strong) UIImageView *img;
-@property (nonatomic, strong) UIImageView *selected;
-@property (nonatomic, assign) BOOL alive;
+@interface Animal : LevelElement
+
+
+
+
 
 @property (nonatomic, strong) NSArray *prey;
 
 -(void)addPrey:(Class)c;
 -(void)eat;
 
--(void)setup;
+
 @end

@@ -49,49 +49,49 @@
 }
 */
 
--(Animal *)findNorthernAnimal {
+-(LevelElement *)findNorthernAnimal {
     Tile *tile = self.tileLocation.north.tile;
-    while(tile != nil && tile.tag != TAG_WALL && tile.animal == nil) {
+    while(tile != nil && tile.tag != TAG_WALL && tile.element == nil) {
         tile = tile.north.tile;
     }
-    if(tile.animal != nil) {
-        return tile.animal;
+    if(tile.element != nil) {
+        return tile.element;
     }
     
     return nil;
 }
 
--(Animal *)findSouthernAnimal {
+-(LevelElement *)findSouthernAnimal {
     Tile *tile = self.tileLocation.south.tile;
-    while(tile != nil && tile.tag != TAG_WALL && tile.animal == nil) {
+    while(tile != nil && tile.tag != TAG_WALL && tile.element == nil) {
         tile = tile.south.tile;
     }
-    if(tile.animal != nil) {
-        return tile.animal;
+    if(tile.element != nil) {
+        return tile.element;
     }
     
     return nil;
 }
 
--(Animal *)findWesternAnimal {
+-(LevelElement *)findWesternAnimal {
     Tile *tile = self.tileLocation.west.tile;
-    while(tile != nil && tile.tag != TAG_WALL && tile.animal == nil) {
+    while(tile != nil && tile.tag != TAG_WALL && tile.element == nil) {
         tile = tile.west.tile;
     }
-    if(tile.animal != nil) {
-        return tile.animal;
+    if(tile.element != nil) {
+        return tile.element;
     }
     
     return nil;
 }
 
--(Animal *)findEasternAnimal {
+-(LevelElement *)findEasternAnimal {
     Tile *tile = self.tileLocation.east.tile;
-    while(tile != nil && tile.tag != TAG_WALL && tile.animal == nil) {
+    while(tile != nil && tile.tag != TAG_WALL && tile.element == nil) {
         tile = tile.east.tile;
     }
-    if(tile.animal != nil) {
-        return tile.animal;
+    if(tile.element != nil) {
+        return tile.element;
     }
     
     return nil;
@@ -99,25 +99,25 @@
 
 
 
--(NSArray *)findAnimals {
+-(NSArray *)findElements {
     NSMutableArray *adjAnimals = [NSMutableArray array];
     
-    Animal *northernAnimal = [self findNorthernAnimal];
+    LevelElement *northernAnimal = [self findNorthernAnimal];
     if(northernAnimal != nil) {
         [adjAnimals addObject:northernAnimal];
     }
     
-    Animal *southernAnimal = [self findSouthernAnimal];
+    LevelElement *southernAnimal = [self findSouthernAnimal];
     if(southernAnimal != nil) {
         [adjAnimals addObject:southernAnimal];
     }
     
-    Animal *westernAnimal = [self findWesternAnimal];
+    LevelElement *westernAnimal = [self findWesternAnimal];
     if(westernAnimal != nil) {
         [adjAnimals addObject:westernAnimal];
     }
     
-    Animal *easternAnimal = [self findEasternAnimal];
+    LevelElement *easternAnimal = [self findEasternAnimal];
     if(easternAnimal != nil) {
         [adjAnimals addObject:easternAnimal];
     }

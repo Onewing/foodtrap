@@ -24,19 +24,19 @@
     self.prey = prey;
 }
 
--(NSArray *)findAnimals {
+-(NSArray *)findElements {
     NSMutableArray *adjAnimals = [NSMutableArray array];
-    if(self.tileLocation.north.tile.animal != nil) {
-        [adjAnimals addObject:self.tileLocation.north.tile.animal];
+    if(self.tileLocation.north.tile.element != nil) {
+        [adjAnimals addObject:self.tileLocation.north.tile.element];
     }
-    if(self.tileLocation.south.tile.animal != nil) {
-        [adjAnimals addObject:self.tileLocation.south.tile.animal];
+    if(self.tileLocation.south.tile.element != nil) {
+        [adjAnimals addObject:self.tileLocation.south.tile.element];
     }
-    if(self.tileLocation.west.tile.animal != nil) {
-        [adjAnimals addObject:self.tileLocation.west.tile.animal];
+    if(self.tileLocation.west.tile.element != nil) {
+        [adjAnimals addObject:self.tileLocation.west.tile.element];
     }
-    if(self.tileLocation.east.tile.animal != nil) {
-        [adjAnimals addObject:self.tileLocation.east.tile.animal];
+    if(self.tileLocation.east.tile.element != nil) {
+        [adjAnimals addObject:self.tileLocation.east.tile.element];
     }
 
     return adjAnimals;
@@ -53,7 +53,7 @@
 
 
 -(void)eat {
-    NSArray *animalsNearby = [self findAnimals];
+    NSArray *animalsNearby = [self findElements];
     for(Animal *animal in animalsNearby) {
         if([self isPrey:animal]) {
             /// Eat the animal
@@ -63,7 +63,7 @@
             /// Kill the animal.
             [animal removeFromSuperview];
             animal.alive = NO;
-            animal.tileLocation.animal = nil;
+            animal.tileLocation.element = nil;
             
             /// Only eat one thing at a time
             break;
@@ -71,33 +71,5 @@
     }
 }
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark Object Life Cycle
--(void)setup {
-    self.alive = YES;
-}
-
--(id)init {
-    if(self = [super init]) {
-        [self setup];
-    }
-    return self;
-}
-
--(id)initWithFrame:(CGRect)frame {
-    if(self = [super initWithFrame:frame]) {
-        [self setup];
-    }
-    return self;
-}
-
--(id)initWithCoder:(NSCoder *)aDecoder {
-    if(self = [super initWithCoder:aDecoder]) {
-        [self setup];
-    }
-    return self;
-}
 
 @end

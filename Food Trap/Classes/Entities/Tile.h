@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Entity.h"
 #import "Path.h"
-@class Animal;
+
+@class LevelElement;
 
 #define TILEW	40
 #define TILEH	40
@@ -37,7 +38,7 @@
 @property (nonatomic, strong) Path *north, *south, *west, *east;
 @property (nonatomic, assign) BOOL processed;
 @property (nonatomic, strong) UIView *img;
-@property (nonatomic, strong) Animal *animal;
+@property (nonatomic, strong) LevelElement *element;
 
 -(BOOL)isAdjacent:(Tile *)tile;
 -(CGPoint)locationPoint;

@@ -20,12 +20,12 @@
 
 -(void)update:(CADisplayLink *)displayLink {
     [super update:displayLink];
-    if(!self.animalSelected.alive) {
-        self.animalSelected = nil;
+    if(!self.elementSelected.alive) {
+        self.elementSelected = nil;
     }
-    for(Animal *animal in self.animals) {
-        if(animal.alive) {
-            [animal update:displayLink];
+    for(LevelElement *element in self.elements) {
+        if(element.alive) {
+            [element update:displayLink];
         }
     }
 }
@@ -81,37 +81,37 @@
     return tile;
 }
 
--(void)setAnimalTile:(Animal *)animal {
-    [animal setUserInteractionEnabled:NO];
-    Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(animal.frame.origin.x+16, animal.frame.origin.y+16) withEvent:nil];
-    [animal setUserInteractionEnabled:YES];
+-(void)setElementTile:(LevelElement *)element {
+    [element setUserInteractionEnabled:NO];
+    Tile *location = (Tile *)[self.viewTileLayer hitTest:CGPointMake(element.frame.origin.x+16, element.frame.origin.y+16) withEvent:nil];
+    [element setUserInteractionEnabled:YES];
     if ([location isKindOfClass:[Tile class]]) {
-        animal.tileLocation.animal = nil;
+        element.tileLocation.element = nil;
         
-        location.animal = animal;
-        animal.tileLocation = location;
+        location.element = element;
+        element.tileLocation = location;
     }
     else {
         NSLog(@"Could not find animal's location!");
     }
 }
 
--(void)processAnimal:(Animal *)animal {
-    [self setAnimalTile:animal];
-    animal.img = [[animal subviews] objectAtIndex:0];
-    animal.delegate = self;
-    [self.animals addObject:animal];
+-(void)processAnimal:(LevelElement *)element {
+    [self setElementTile:element];
+    element.img = [[element subviews] objectAtIndex:0];
+    element.delegate = self;
+    [self.elements addObject:element];
 }
 
--(void)animalTouched:(Animal *)touchedAnimal {
-    if (touchedAnimal.alive) {
-        if(self.animalSelected != nil)
-            [self.animalSelected.selected removeFromSuperview];
-        self.animalSelected = touchedAnimal;
+-(void)elementTouched:(LevelElement *)touchedElement {
+    if (touchedElement.alive) {
+        if(self.elementSelected != nil)
+            [self.elementSelected.selected removeFromSuperview];
+        self.elementSelected = touchedElement;
         UIImageView *imgSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selected.png"]];
         [imgSelected setFrame:CGRectMake(0, 0, TILEW, TILEH)];
-        [self.animalSelected addSubview:imgSelected];
-        self.animalSelected.selected = imgSelected;
+        [self.elementSelected addSubview:imgSelected];
+        self.elementSelected.selected = imgSelected;
     }
 }
 
@@ -121,29 +121,29 @@
 
 -(void)entityTouched:(NSNotification *)notification {
     
-    if(self.animalSelected.moving) {
+    if(self.elementSelected.moving) {
         return;
     }
     
     Entity *e = [[notification userInfo] objectForKey:@"entity"];
-    if ([e isKindOfClass:[Animal class]]) {
-        NSLog(@"touched an animal!");
-        [self animalTouched:(Animal *)e];
+    if ([e isKindOfClass:[LevelElement class]]) {
+        NSLog(@"touched an element!");
+        [self elementTouched:(LevelElement *)e];
         
     }
     if([e isKindOfClass:[Tile class]]) {
         NSLog(@"touched a tile!");
-        if(self.animalSelected != nil) {
+        if(self.elementSelected != nil) {
             /// Move animal if tapped a tile adjacent to selected animal.
             Tile *tileSelected = (Tile *) e;
             
-            if ([tileSelected isAdjacent:self.animalSelected.tileLocation]) {
+            if ([tileSelected isAdjacent:self.elementSelected.tileLocation]) {
                 NSLog(@"Is adjacent!");
-                [self.animalSelected moveToLocation:[tileSelected locationPoint] speed:128.0f];
+                [self.elementSelected moveToLocation:[tileSelected locationPoint] speed:128.0f];
             }
             else {
-                [self.animalSelected.selected removeFromSuperview];
-                self.animalSelected = nil;
+                [self.elementSelected.selected removeFromSuperview];
+                self.elementSelected = nil;
             }
         }
         
@@ -159,7 +159,7 @@
 #pragma mark -
 #pragma mark Main Level Logic
 -(void)layerTouched:(NSNotification *)notification {
-    if(self.animalSelected.moving) {
+    if(self.elementSelected.moving) {
         return;
     }
     
@@ -182,15 +182,17 @@
         /// The level is complete, unless anything fails to meet the criteria in the loop below
         BOOL levelComplete = YES;
         
-        for(Animal *animal in self.animals) {
-            if(animal.alive) {
-                [animal eat];
-                
-                if ([animal.tileLocation class] != [SafeZone class]) {
-                    levelComplete = NO;
+        for(LevelElement *element in self.elements) {
+            if([element isKindOfClass:[Animal class]]) {
+                Animal *animal = (Animal *)element;
+                if(animal.alive) {
+                    [animal eat];
+                    
+                    if ([animal.tileLocation class] != [SafeZone class]) {
+                        levelComplete = NO;
+                    }
                 }
-            }            
-            
+            }
         }
         self.levelComplete = levelComplete;
         
@@ -204,9 +206,9 @@
 #pragma mark -
 #pragma mark EntityDelegate Methods
 -(void)movedToLocation:(Entity *)entity {
-    if([entity isKindOfClass:[Animal class]]) {
+    if([entity isKindOfClass:[LevelElement class]]) {
         
-        [self setAnimalTile:(Animal *)entity];
+        [self setElementTile:(LevelElement *)entity];
     
         /// Run all the game rules to see if anything should happen now that the board has changed
         [self animalLogic];
@@ -240,7 +242,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.tiles = [NSMutableArray array];
-    self.animals = [NSMutableArray array];
+    self.elements = [NSMutableArray array];
     for(Tile *tile in [self.viewTileLayer subviews]) {
         [self processTile:tile];
     }
@@ -249,11 +251,11 @@
         [self.viewTileLayer sendSubviewToBack:tile];
     }
     
-    for(Animal *animal in [self.viewAnimalLayer subviews]) {
-        [self processAnimal:animal];
+    for(LevelElement *element in [self.viewAnimalLayer subviews]) {
+        [self processAnimal:element];
     }
     NSLog(@"Tiles: %@", self.tiles);
-    NSLog(@"Animals:  %@", self.animals);
+    NSLog(@"Animals:  %@", self.elements);
     
     self.levelComplete = NO;
     self.state = PLAYING;

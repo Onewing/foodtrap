@@ -25,10 +25,10 @@ typedef enum levelState {
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollLayer;
 
 @property (nonatomic, strong) NSMutableArray *tiles;
-@property (nonatomic, strong) NSMutableArray *animals;
+@property (nonatomic, strong) NSMutableArray *elements;
 @property (nonatomic, assign) BOOL levelComplete;
 @property (nonatomic, assign) LEVELSTATE state;
 
-@property (nonatomic, strong) Animal *animalSelected;
+@property (nonatomic, strong) LevelElement *elementSelected;
 
 @end

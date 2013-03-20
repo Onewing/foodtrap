@@ -25,6 +25,11 @@
 		593B23A81662DA68004FE031 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593B23A71662DA68004FE031 /* GameViewController.m */; };
 		593B23AA1662DDB4004FE031 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B23A91662DDB3004FE031 /* QuartzCore.framework */; };
 		593B23AC1662DE04004FE031 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 593B23AB1662DE04004FE031 /* GameViewController.xib */; };
+		59401B3416FA745C008BB0ED /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 59401B3216FA745C008BB0ED /* rock.png */; };
+		59401B3516FA745C008BB0ED /* rock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59401B3316FA745C008BB0ED /* rock@2x.png */; };
+		59401B3A16FA74A0008BB0ED /* Rock.m in Sources */ = {isa = PBXBuildFile; fileRef = 59401B3916FA74A0008BB0ED /* Rock.m */; };
+		59401B3C16FA750A008BB0ED /* Level1-3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59401B3B16FA750A008BB0ED /* Level1-3.xib */; };
+		59401B3F16FA7957008BB0ED /* LevelElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 59401B3E16FA7957008BB0ED /* LevelElement.m */; };
 		5943F48F168F905F00773909 /* wall11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F483168F905F00773909 /* wall11.png */; };
 		5943F490168F905F00773909 /* wall11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F484168F905F00773909 /* wall11@2x.png */; };
 		5943F491168F905F00773909 /* wall12.png in Resources */ = {isa = PBXBuildFile; fileRef = 5943F485168F905F00773909 /* wall12.png */; };
@@ -131,6 +136,13 @@
 		593B23A71662DA68004FE031 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		593B23A91662DDB3004FE031 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		593B23AB1662DE04004FE031 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		59401B3216FA745C008BB0ED /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		59401B3316FA745C008BB0ED /* rock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rock@2x.png"; sourceTree = "<group>"; };
+		59401B3816FA74A0008BB0ED /* Rock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rock.h; path = Entities/Objects/Rock.h; sourceTree = "<group>"; };
+		59401B3916FA74A0008BB0ED /* Rock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rock.m; path = Entities/Objects/Rock.m; sourceTree = "<group>"; };
+		59401B3B16FA750A008BB0ED /* Level1-3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Level1-3.xib"; path = "Levels/Level1-3.xib"; sourceTree = "<group>"; };
+		59401B3D16FA7957008BB0ED /* LevelElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelElement.h; path = Entities/LevelElement.h; sourceTree = "<group>"; };
+		59401B3E16FA7957008BB0ED /* LevelElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelElement.m; path = Entities/LevelElement.m; sourceTree = "<group>"; };
 		5943F483168F905F00773909 /* wall11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall11.png; path = Resources/Walls/wall11.png; sourceTree = "<group>"; };
 		5943F484168F905F00773909 /* wall11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wall11@2x.png"; path = "Resources/Walls/wall11@2x.png"; sourceTree = "<group>"; };
 		5943F485168F905F00773909 /* wall12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall12.png; path = Resources/Walls/wall12.png; sourceTree = "<group>"; };
@@ -284,11 +296,31 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		59401B3116FA745C008BB0ED /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				59401B3216FA745C008BB0ED /* rock.png */,
+				59401B3316FA745C008BB0ED /* rock@2x.png */,
+			);
+			name = Objects;
+			path = Resources/Objects;
+			sourceTree = "<group>";
+		};
+		59401B3716FA746D008BB0ED /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				59401B3816FA74A0008BB0ED /* Rock.h */,
+				59401B3916FA74A0008BB0ED /* Rock.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		5965470E16859BAB00DB767B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				598A64A816AE0CD400617E77 /* safe.png */,
 				598A64A916AE0CD400617E77 /* safe@2x.png */,
+				59401B3116FA745C008BB0ED /* Objects */,
 				597CF927169656340060F4F9 /* Animals */,
 				5965470F16859BB500DB767B /* Walls */,
 			);
@@ -348,6 +380,7 @@
 				5965473516859C0E00DB767B /* Template.xib */,
 				5965473B16859E5C00DB767B /* Level1-1.xib */,
 				5955C4AE16C9C57200A1A671 /* Level1-2.xib */,
+				59401B3B16FA750A008BB0ED /* Level1-3.xib */,
 				5965473D1686597D00DB767B /* Tiles.xib */,
 			);
 			name = Levels;
@@ -372,6 +405,7 @@
 		59AE33C21673E4C6007BE47E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				59401B3716FA746D008BB0ED /* Objects */,
 				593B23751660933E004FE031 /* Entity.h */,
 				593B23761660933E004FE031 /* Entity.m */,
 				59654707168592A000DB767B /* Tile.h */,
@@ -388,6 +422,8 @@
 				594C38B916C87450002D8B49 /* SafeZone.m */,
 				598D11A616CF08E4004A9394 /* Eagle.h */,
 				598D11A716CF08E4004A9394 /* Eagle.m */,
+				59401B3D16FA7957008BB0ED /* LevelElement.h */,
+				59401B3E16FA7957008BB0ED /* LevelElement.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -562,6 +598,9 @@
 				598D11A516CF08BB004A9394 /* eagle@2x.png in Resources */,
 				59ECA64B16D3022D0062EB4F /* ShipSelectionScreen.xib in Resources */,
 				59F78D4716D6EE5500F4FB70 /* LevelSelectionScreen.xib in Resources */,
+				59401B3416FA745C008BB0ED /* rock.png in Resources */,
+				59401B3516FA745C008BB0ED /* rock@2x.png in Resources */,
+				59401B3C16FA750A008BB0ED /* Level1-3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +635,8 @@
 				598D11A816CF08E4004A9394 /* Eagle.m in Sources */,
 				59ECA64A16D3022D0062EB4F /* ShipSelectionScreen.m in Sources */,
 				59F78D4616D6EE5500F4FB70 /* LevelSelectionScreen.m in Sources */,
+				59401B3A16FA74A0008BB0ED /* Rock.m in Sources */,
+				59401B3F16FA7957008BB0ED /* LevelElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
